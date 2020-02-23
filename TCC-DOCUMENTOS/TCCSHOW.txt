@@ -1,0 +1,14 @@
+Arthur:  Empresario, artista, forma pagamento
+Diego:  Funcionario, financeiro
+Gabriel:  Evento, cliente
+Lucas:  Sistema(log, descontos)
+Marcos:  Ingresso (novidades, usuarios)
+
+
+---------------- REGRA DE NEGOCIO
+
+Diego(Slide) > Arthur(Empresario) > Arthur(Artista) > Gabriel(Evento) > Gabriel(Cliente) > Arthur(Forma Pagamento) > Lucas(Descontos) >Marcos(Gestao de Preços)> Marcos(Vender) >  Marcos(Consultar)>
+
+----------------RESTO DO SISTEMA
+
+Diego(Função) > Diego(Funcionario) >  Marcos(Usuarios) > Diego(Novidades) > Diego(Contas) > Diego(Relatorio) > Lucas(Log)

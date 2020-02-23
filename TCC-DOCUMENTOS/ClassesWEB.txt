@@ -1,0 +1,82 @@
+*ARTISTA:
+-Métodos:
+ListarHistorico- MostrarArtistaOn
+ConsultarNORMAL- MostrarArtistaOn
+ConsultarFIXO- MostrarArtistaOn
+ConsultarPorNome- AgendaOn , AgendaOff
+ListarGeral- ArtistaOn,ArtistaOff
+
+*ASSENTO:
+-Métodos:
+ConsultarPercentual- IngressoOn
+ConsultarAssento- IngressoOn
+ConsultarValorMaximo- PagamentoOn
+
+*BOLETO:
+-Métodos:
+AddBoleto- PagamentoOn
+
+*CEP:
+-Métodos:
+Consultar- PagamentoOn
+
+*CLIENTE:
+-Métodos:
+ConsultarPorCliente- IngressoOn
+Consultar- PerfilOn, PagamentoOn
+ListarHistorico- PerfilOn
+Cliente_crud- PerfilOn,CadastroOff
+ConsultarCPF- PerfilOn,CadastroOff
+
+*CONTAS:
+-Métodos:
+IncluirVenda- PagamentoOn
+Contas_crud- PagamentoOn
+
+*DESCONTO:
+-Métodos:
+Consultar- PagamentoOn
+Descontos_crud- PagamentoOn
+
+*EVENTO:
+-Métodos:
+Consultar- IngressoOn, MostrarEventoOn, PagamentoOn,MostrarEventoOff
+ListarGeral- AgendaOn, AgendaOff
+
+*FEEDBACK:
+-Membros:
+ID_FEEDBACK
+MENSAGEM
+ID_CLIENTE
+AVALIACAO
+TITULO
+
+-Métodos:
+IncluirMensagem- FeedBackOn
+RemoverMensagem- FeedBackOn
+
+*INGRESSO:
+-Métodos:
+IncluirEventoIngresso- PagamentoOn
+IncluirPagamento- PagamentoOn
+IncluirDetalhePag- PagamentoOn
+IncluirVendaIngresso- PagamentoOn
+IncluirAssentoCliente- PagamentoOn
+IncluirItemVenda- PagamentoOn
+ConsultarPorEvento- IngressoOn
+ConsultarPorCliente- PagamentoOn
+
+*LOGIN:
+-Métodos:
+AlterarSenha- EsqueceuSenhaOff
+Logar- Login
+Login_crud- PerfilOn, CadastroOff
+ConsultarUsuario- Login,PerfilOn, CadastroOff
+
+*PESSOA:
+-Métodos:
+Pessoa_crud- PerfilOn, CadastroOff
+
+*ValidadorCPF:
+-Métodos:
+CampoCPF- PerfilOn, CadastroOff

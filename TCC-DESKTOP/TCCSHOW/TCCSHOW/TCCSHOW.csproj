@@ -1,0 +1,917 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{83EFA415-7C6E-441C-B52E-51FDCFF98FE2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TCCSHOW</RootNamespace>
+    <AssemblyName>TCCSHOW</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge.Video">
+      <HintPath>..\..\..\..\..\Downloads\AForge.NET Framework-2.2.5\Release\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\..\..\..\..\Downloads\AForge.NET Framework-2.2.5\Release\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>..\packages\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Dynamsoft.BarcodeReader, Version=6.2.0.605, Culture=neutral, PublicKeyToken=ad0967c36e09320a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dynamsoft.DotNet.Barcode.6.2.0\lib\net40\Dynamsoft.BarcodeReader.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="MessagingToolkit.Barcode">
+      <HintPath>..\..\..\..\..\Downloads\Barcode_Scanner_Generator_C_Sharp\Barcode_Scanner_Generator_C_Sharp\Barcode_Scanner_Generator_C_Sharp\bin\Debug\MessagingToolkit.Barcode.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.1000.523\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=4.112.2.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TCCSHOW">
+      <HintPath>obj\Debug\TCCSHOW.exe</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Modelos\ModeloCadastroPadrao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modelos\ModeloCadastroPadrao.Designer.cs">
+      <DependentUpon>ModeloCadastroPadrao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\ModeloConsultaPadrao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modelos\ModeloConsultaPadrao.Designer.cs">
+      <DependentUpon>ModeloConsultaPadrao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\ModeloFiltro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modelos\ModeloFiltro.Designer.cs">
+      <DependentUpon>ModeloFiltro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\ModeloGeralCompleto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modelos\ModeloGeralCompleto.Designer.cs">
+      <DependentUpon>ModeloGeralCompleto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\ModeloConsultaGeral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modelos\ModeloConsultaGeral.Designer.cs">
+      <DependentUpon>ModeloConsultaGeral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\ModeloGeral.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modelos\ModeloGeral.Designer.cs">
+      <DependentUpon>ModeloGeral.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelos\ModeloPadrao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modelos\ModeloPadrao.Designer.cs">
+      <DependentUpon>ModeloPadrao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Agente\frmAgenteCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Agente\frmAgenteCadastro.Designer.cs">
+      <DependentUpon>frmAgenteCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Agente\frmAgenteConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Agente\frmAgenteConsulta.Designer.cs">
+      <DependentUpon>frmAgenteConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmAgenteFiltro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmAgenteFiltro.Designer.cs">
+      <DependentUpon>frmAgenteFiltro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Artistas\frmArtistaCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Artistas\frmArtistaCadastro.Designer.cs">
+      <DependentUpon>frmArtistaCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Artistas\frmArtistaConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Artistas\frmArtistaConsulta.Designer.cs">
+      <DependentUpon>frmArtistaConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmProcurarAgente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmProcurarAgente.Designer.cs">
+      <DependentUpon>frmProcurarAgente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmArtistaFiltro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmArtistaFiltro.Designer.cs">
+      <DependentUpon>frmArtistaFiltro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Assento\frmAssentoPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Assento\frmAssentoPagamento.Designer.cs">
+      <DependentUpon>frmAssentoPagamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Assento\frmAssentoPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Assento\frmAssentoPrincipal.Designer.cs">
+      <DependentUpon>frmAssentoPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Assento\frmAssentoProcurar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Assento\frmAssentoProcurar.Designer.cs">
+      <DependentUpon>frmAssentoProcurar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmClienteFiltro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmClienteFiltro.Designer.cs">
+      <DependentUpon>frmClienteFiltro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmEventoFiltro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmEventoFiltro.Designer.cs">
+      <DependentUpon>frmEventoFiltro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmProcurarArtista.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmProcurarArtista.Designer.cs">
+      <DependentUpon>frmProcurarArtista.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmProcurarCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmProcurarCliente.Designer.cs">
+      <DependentUpon>frmProcurarCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmProcurarConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmProcurarConta.Designer.cs">
+      <DependentUpon>frmProcurarConta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmProcurarEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmProcurarEvento.Designer.cs">
+      <DependentUpon>frmProcurarEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Cliente\frmClienteCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Cliente\frmClienteCadastro.Designer.cs">
+      <DependentUpon>frmClienteCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Cliente\frmClienteConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Cliente\frmClienteConsulta.Designer.cs">
+      <DependentUpon>frmClienteConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Contas\frmContasConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Contas\frmContasConsulta.Designer.cs">
+      <DependentUpon>frmContasConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmContasFiltro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmContasFiltro.Designer.cs">
+      <DependentUpon>frmContasFiltro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Contas\frmContasRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Contas\frmContasRelatorio.Designer.cs">
+      <DependentUpon>frmContasRelatorio.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Descontos\frmDescontos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Descontos\frmDescontos.Designer.cs">
+      <DependentUpon>frmDescontos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Eventos\frmEventoConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Eventos\frmEventoConsulta.Designer.cs">
+      <DependentUpon>frmEventoConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmProcurarFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmProcurarFuncionario.Designer.cs">
+      <DependentUpon>frmProcurarFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\FormaPagamento\frmFormaDePag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\FormaPagamento\frmFormaDePag.Designer.cs">
+      <DependentUpon>frmFormaDePag.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Funcionario\frmFuncionarioConsulta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Funcionario\frmFuncionarioConsulta.Designer.cs">
+      <DependentUpon>frmFuncionarioConsulta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Contas\frmContasCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Contas\frmContasCadastro.Designer.cs">
+      <DependentUpon>frmContasCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Eventos\frmEventoCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Eventos\frmEventoCadastro.Designer.cs">
+      <DependentUpon>frmEventoCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Funcao\frmFuncao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Funcao\frmFuncao.Designer.cs">
+      <DependentUpon>frmFuncao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Funcionario\frmFuncionarioCadastro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Funcionario\frmFuncionarioCadastro.Designer.cs">
+      <DependentUpon>frmFuncionarioCadastro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmFuncionarioFiltro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmFuncionarioFiltro.Designer.cs">
+      <DependentUpon>frmFuncionarioFiltro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Ingresso\frmCancelarVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Ingresso\frmCancelarVenda.Designer.cs">
+      <DependentUpon>frmCancelarVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Ingresso\frmConsultarQRCODE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Ingresso\frmConsultarQRCODE.Designer.cs">
+      <DependentUpon>frmConsultarQRCODE.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Ingresso\frmIngresso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Ingresso\frmIngresso.Designer.cs">
+      <DependentUpon>frmIngresso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Ingresso\frmIngressoConsultar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Ingresso\frmIngressoConsultar.Designer.cs">
+      <DependentUpon>frmIngressoConsultar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmIngressoFiltro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmIngressoFiltro.Designer.cs">
+      <DependentUpon>frmIngressoFiltro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Novidades\frmNovidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Novidades\frmNovidades.Designer.cs">
+      <DependentUpon>frmNovidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Preco\frmPrecos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Preco\frmPrecos.Designer.cs">
+      <DependentUpon>frmPrecos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmUsuarioFiltro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Filtros\frmUsuarioFiltro.Designer.cs">
+      <DependentUpon>frmUsuarioFiltro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Negocios\Usuarios\frmUsuarioGerenciar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Negocios\Usuarios\frmUsuarioGerenciar.Designer.cs">
+      <DependentUpon>frmUsuarioGerenciar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Componentes\Loading.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Componentes\Loading.Designer.cs">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Componentes\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Componentes\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\frmLoginNovo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\frmLoginNovo.Designer.cs">
+      <DependentUpon>frmLoginNovo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Hub.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Hub.Designer.cs">
+      <DependentUpon>Hub.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Log\frmLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Log\frmLog.Designer.cs">
+      <DependentUpon>frmLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sistema\Pergunta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sistema\Pergunta.Designer.cs">
+      <DependentUpon>Pergunta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Modelos\ModeloCadastroPadrao.resx">
+      <DependentUpon>ModeloCadastroPadrao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\ModeloConsultaPadrao.resx">
+      <DependentUpon>ModeloConsultaPadrao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\ModeloFiltro.resx">
+      <DependentUpon>ModeloFiltro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\ModeloGeralCompleto.resx">
+      <DependentUpon>ModeloGeralCompleto.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\ModeloConsultaGeral.resx">
+      <DependentUpon>ModeloConsultaGeral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\ModeloGeral.resx">
+      <DependentUpon>ModeloGeral.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modelos\ModeloPadrao.resx">
+      <DependentUpon>ModeloPadrao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Agente\frmAgenteCadastro.resx">
+      <DependentUpon>frmAgenteCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Agente\frmAgenteConsulta.resx">
+      <DependentUpon>frmAgenteConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Filtros\frmAgenteFiltro.resx">
+      <DependentUpon>frmAgenteFiltro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Artistas\frmArtistaCadastro.resx">
+      <DependentUpon>frmArtistaCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Artistas\frmArtistaConsulta.resx">
+      <DependentUpon>frmArtistaConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Filtros\frmProcurarAgente.resx">
+      <DependentUpon>frmProcurarAgente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Filtros\frmArtistaFiltro.resx">
+      <DependentUpon>frmArtistaFiltro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Assento\frmAssentoPagamento.resx">
+      <DependentUpon>frmAssentoPagamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Assento\frmAssentoPrincipal.resx">
+      <DependentUpon>frmAssentoPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Assento\frmAssentoProcurar.resx">
+      <DependentUpon>frmAssentoProcurar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Filtros\frmClienteFiltro.resx">
+      <DependentUpon>frmClienteFiltro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Filtros\frmEventoFiltro.resx">
+      <DependentUpon>frmEventoFiltro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Filtros\frmProcurarArtista.resx">
+      <DependentUpon>frmProcurarArtista.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Filtros\frmProcurarCliente.resx">
+      <DependentUpon>frmProcurarCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Filtros\frmProcurarConta.resx">
+      <DependentUpon>frmProcurarConta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Filtros\frmProcurarEvento.resx">
+      <DependentUpon>frmProcurarEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Cliente\frmClienteCadastro.resx">
+      <DependentUpon>frmClienteCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Cliente\frmClienteConsulta.resx">
+      <DependentUpon>frmClienteConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Contas\frmContasConsulta.resx">
+      <DependentUpon>frmContasConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Filtros\frmContasFiltro.resx">
+      <DependentUpon>frmContasFiltro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Contas\frmContasRelatorio.resx">
+      <DependentUpon>frmContasRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Descontos\frmDescontos.resx">
+      <DependentUpon>frmDescontos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Eventos\frmEventoConsulta.resx">
+      <DependentUpon>frmEventoConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Filtros\frmProcurarFuncionario.resx">
+      <DependentUpon>frmProcurarFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\FormaPagamento\frmFormaDePag.resx">
+      <DependentUpon>frmFormaDePag.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Funcionario\frmFuncionarioConsulta.resx">
+      <DependentUpon>frmFuncionarioConsulta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Filtros\frmFuncionarioFiltro.resx">
+      <DependentUpon>frmFuncionarioFiltro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Ingresso\frmCancelarVenda.resx">
+      <DependentUpon>frmCancelarVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Ingresso\frmConsultarQRCODE.resx">
+      <DependentUpon>frmConsultarQRCODE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Ingresso\frmIngresso.resx">
+      <DependentUpon>frmIngresso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Contas\frmContasCadastro.resx">
+      <DependentUpon>frmContasCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Eventos\frmEventoCadastro.resx">
+      <DependentUpon>frmEventoCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Funcao\frmFuncao.resx">
+      <DependentUpon>frmFuncao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Funcionario\frmFuncionarioCadastro.resx">
+      <DependentUpon>frmFuncionarioCadastro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Ingresso\frmIngressoConsultar.resx">
+      <DependentUpon>frmIngressoConsultar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Filtros\frmIngressoFiltro.resx">
+      <DependentUpon>frmIngressoFiltro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Novidades\frmNovidades.resx">
+      <DependentUpon>frmNovidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Preco\frmPrecos.resx">
+      <DependentUpon>frmPrecos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Filtros\frmUsuarioFiltro.resx">
+      <DependentUpon>frmUsuarioFiltro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Negocios\Usuarios\frmUsuarioGerenciar.resx">
+      <DependentUpon>frmUsuarioGerenciar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Componentes\Comprovante.rdlc" />
+    <EmbeddedResource Include="Sistema\Componentes\Ingresso.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Componentes\Loading.resx">
+      <DependentUpon>Loading.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Componentes\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\frmLoginNovo.resx">
+      <DependentUpon>frmLoginNovo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Hub.resx">
+      <DependentUpon>Hub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Log\frmLog.resx">
+      <DependentUpon>frmLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sistema\Pergunta.resx">
+      <DependentUpon>Pergunta.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Imagens\MICTRANSP - VERMELHO" />
+    <None Include="Imagens\TELA-TESTE.psd" />
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\BLL.Contas.datasource" />
+    <None Include="Properties\DataSources\BLL.FormaPagamento.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{e403c57b-cae5-4aaf-bd83-0495381cc1cf}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAO\DAO.csproj">
+      <Project>{93573b9a-3861-4128-827b-bf3ef0046f64}</Project>
+      <Name>DAO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\CortinaTransp.png" />
+    <None Include="Imagens\CortinaPano.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Imagens\SetorIcone.png" />
+    <None Include="Imagens\Icones\AssentoIcone1.ico" />
+    <None Include="Imagens\AssentoIcone3121.png" />
+    <None Include="Imagens\Carregando21.gif" />
+    <None Include="Imagens\DinheiroIcone4.png" />
+    <None Include="Imagens\EditarIcone7.png" />
+    <None Include="Resources\mic1.png" />
+    <None Include="Imagens\UserIcone4.png" />
+    <None Include="Resources\assentos.jpeg" />
+    <None Include="Imagens\Icones\AssentoIcone2.ico" />
+    <None Include="Imagens\Carregando22.gif" />
+    <None Include="Imagens\InternetIcone3.png" />
+    <None Include="Resources\mic2.png" />
+    <None Include="Imagens\Carregando.gif" />
+    <None Include="Imagens\ComprasIcone3.png" />
+    <None Include="Imagens\FundoTeste.png" />
+    <None Include="Imagens\HumoristaAdicionarIcone.png" />
+    <None Include="Imagens\icons8_Fit_to_Width_50px.png" />
+    <None Include="Imagens\icons8_Fit_to_Width_52px_1.png" />
+    <None Include="Imagens\icons8_Reset_10px_1.png" />
+    <None Include="Imagens\icons8_Reset_96px.png" />
+    <None Include="Imagens\TwitterIcone.jpeg" />
+    <None Include="Imagens\mic.png" />
+    <None Include="Imagens\DesativarIcone14.png" />
+    <None Include="Imagens\BaixarIcone.png" />
+    <None Include="Imagens\TecladoIcone.png" />
+    <None Include="Imagens\MouseDireitoIcone.png" />
+    <None Include="Imagens\QrCodeIcone.png" />
+    <None Include="Imagens\ScannerIcone.png" />
+    <None Include="Imagens\QrCodeIcone1.png" />
+    <None Include="Imagens\QrCodeIcone2.png" />
+    <None Include="Resources\btnConsultarQRCODE.Image.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Imagens\ValidarIcone4.png" />
+    <None Include="Resources\mic.png" />
+    <None Include="Imagens\WhatsApp Image 2017-05-07 at 14.45.07.jpg" />
+    <None Include="Imagens\NovidadesIcone2.png" />
+    <None Include="Imagens\NovidadesIcone.png" />
+    <None Include="Imagens\twitterIcone1.png" />
+    <None Include="Imagens\MoedasIcone.png" />
+    <None Include="Imagens\RelatorioIcone2.png" />
+    <None Include="Imagens\SistemaIcone2.png" />
+    <None Include="Imagens\relogioIcon.png" />
+    <None Include="Imagens\relogioIcon2.png" />
+    <None Include="Imagens\WarningIcone2.png" />
+    <None Include="Imagens\RelatorioIcone.png" />
+    <None Include="Imagens\PasswordIcone2.png" />
+    <None Include="Imagens\MostrarSenhaIcone.png" />
+    <None Include="Imagens\PerguntaIcone.png" />
+    <None Include="Imagens\WarningIcone.png" />
+    <None Include="Imagens\UnlockIcone.png" />
+    <None Include="Imagens\User3Icone.png" />
+    <None Include="Imagens\User2Icone.png" />
+    <None Include="Imagens\XIcone2.png" />
+    <None Include="Imagens\PessoaIcone.png" />
+    <None Include="Imagens\SetaCimaIcone1.png" />
+    <None Include="Imagens\SetaCimaIcone.png" />
+    <None Include="Imagens\TelaCheiaIcone.png" />
+    <None Include="Imagens\MinimizarIcone.png" />
+    <None Include="Imagens\RecepcaoIcone.png" />
+    <None Include="Imagens\AdministracaoIcone.png" />
+    <None Include="Imagens\IngressoIcone.png" />
+    <None Include="Imagens\ComprasIcone.png" />
+    <None Include="Imagens\SistemaIcone.png" />
+    <None Include="Imagens\AjudaIcone.png" />
+    <None Include="Imagens\Voltar Icone2.png" />
+    <None Include="Imagens\BinoculosIcone.png" />
+    <None Include="Imagens\EditarIcone61.png" />
+    <None Include="Imagens\BinoculosIcone1.png" />
+    <None Include="Imagens\FiltroIcon.png" />
+    <None Include="Imagens\AlocarIcone.png" />
+    <None Include="Imagens\BinoculosIcone2.png" />
+    <None Include="Imagens\FiltroIcon1.png" />
+    <None Include="Imagens\ReiniciarIcone.png" />
+    <None Include="Imagens\Pontos.gif" />
+    <None Include="Imagens\Voltar Icone.png" />
+    <None Include="Imagens\ValidarIcone3.png" />
+    <None Include="Imagens\Save Icone.png" />
+    <None Include="Imagens\respostaIcone.png" />
+    <None Include="Imagens\ResidenciaIcone1.png" />
+    <None Include="Imagens\UserIcone3.png" />
+    <None Include="Imagens\UserIcone2.png" />
+    <None Include="Imagens\XIcone.png" />
+    <None Include="Imagens\PasswordIcone1.png" />
+    <None Include="Imagens\UserIcone1.png" />
+    <None Include="Imagens\ProcurarIcone1.png" />
+    <None Include="Imagens\twitterIcone.png" />
+    <None Include="Imagens\TelefoneIcone.png" />
+    <None Include="Imagens\ValidarIcone2.png" />
+    <None Include="Imagens\ValidarIcone1.png" />
+    <None Include="Imagens\ValidarIcone.png" />
+    <None Include="Imagens\TelaAjuda-BotaoEditarEvento.png" />
+    <None Include="Imagens\TelaAjuda-BotaoEditarArtista.png" />
+    <None Include="Imagens\TelaAjuda-BotaoAdicionarEvento.png" />
+    <None Include="Imagens\TelaAjuda-BotaoAdicionarArtista.png" />
+    <None Include="Imagens\TelaAjuda-Hub-Eventos.png" />
+    <None Include="Imagens\TelaAjuda-Hub-Artistas.png" />
+    <None Include="Imagens\TelaAjuda-Hub-Assentos.png" />
+    <None Include="Imagens\TelaAjuda-Hub.png" />
+    <None Include="Imagens\TelaAjuda-BotaoProcurarAssento.png" />
+    <None Include="Imagens\musica.png" />
+    <None Include="Imagens\AssentoIcone.png" />
+    <None Include="Imagens\ArtistaIcone.png" />
+    <None Include="Imagens\AssentoProcurarIcone.png" />
+    <None Include="Imagens\mictransp2-SemBorda.png" />
+    <None Include="Imagens\FundoInternet.jpg" />
+    <None Include="Imagens\BotaoDeslogar.png" />
+    <None Include="Imagens\ConfigIcone.png" />
+    <None Include="Imagens\QuestionIcone.png" />
+    <None Include="Imagens\EditarIcone.png" />
+    <None Include="Imagens\BotaoDeslogar1.png" />
+    <None Include="Imagens\FundoDegrade.jpg" />
+    <None Include="Imagens\eventoIcone.png" />
+    <None Include="Imagens\EventoAdicionarIcone.png" />
+    <None Include="Imagens\EventoEditarIcone.png" />
+    <None Include="Imagens\HumoristaAdicionarIcone1.png" />
+    <None Include="Imagens\EditarIcone1.png" />
+    <None Include="Imagens\FundoDegrade2.jpg" />
+    <None Include="Imagens\GeneroIcone.png" />
+    <None Include="Imagens\IdadeIcone.png" />
+    <None Include="Imagens\EventoAdicionarIcone1.png" />
+    <None Include="Imagens\ExcluirIcone.png" />
+    <None Include="Imagens\DesativarIcone.png" />
+    <None Include="Imagens\DesativarIcone1.png" />
+    <None Include="Imagens\Fundo.jpg" />
+    <None Include="Imagens\ArtistaIcone1.png" />
+    <None Include="Imagens\EditarIcone11.png" />
+    <None Include="Imagens\EditarIcone3.png" />
+    <None Include="Imagens\EditarIcone12.png" />
+    <None Include="Imagens\HumoristaAdicionarIcone2.png" />
+    <None Include="Imagens\HumoristaAdicionarIcone11.png" />
+    <None Include="Imagens\AssentoProcurarIcone1.png" />
+    <None Include="Imagens\EditarIconeArtista.png" />
+    <None Include="Imagens\EditarIconeEvento.png" />
+    <None Include="Imagens\eventoIcone1.png" />
+    <None Include="Imagens\HAHAHA.jpg" />
+    <None Include="Imagens\facebookIcone.png" />
+    <None Include="Imagens\instagramIcone.png" />
+    <None Include="Imagens\FuncionarioIcon.png" />
+    <None Include="Imagens\ContaIcone.png" />
+    <None Include="Imagens\GerenciarIcone.png" />
+    <None Include="Imagens\AdicionarContaIcone.png" />
+    <None Include="Imagens\EditarIcone4.png" />
+    <None Include="Imagens\AdicionarIcone.png" />
+    <None Include="Imagens\DinheiroIcone.png" />
+    <None Include="Imagens\eventoIcone11.png" />
+    <None Include="Imagens\ExcluirIcone1.png" />
+    <None Include="Imagens\DinheiroIcone2.png" />
+    <None Include="Imagens\DocumentoIcone.png" />
+    <None Include="Imagens\InstragamIcone.jpeg" />
+    <None Include="Imagens\ImprimirIcone.png" />
+    <None Include="Imagens\DescontoIcone.png" />
+    <None Include="Imagens\DivIcone.png" />
+    <None Include="Imagens\EmpresaIcone.png" />
+    <None Include="Imagens\AssentoIcone2.png" />
+    <None Include="Imagens\AssentoIcone3.png" />
+    <None Include="Imagens\Especial.jpg" />
+    <None Include="Imagens\AssentoIcone31.png" />
+    <None Include="Imagens\AssentoIcone4.png" />
+    <None Include="Imagens\AssentoIcone5.png" />
+    <None Include="Imagens\AssentoIcone41.png" />
+    <None Include="Imagens\EditarIcone5.png" />
+    <None Include="Imagens\HumoristaAdicionarIcone3.png" />
+    <None Include="Imagens\HumoristaAdicionarIcone4.png" />
+    <None Include="Imagens\EditarIcone51.png" />
+    <None Include="Imagens\MenosIcone.png" />
+    <None Include="Imagens\MaisIcone.png" />
+    <None Include="Imagens\DocumentoIcone2.png" />
+    <None Include="Imagens\EditarIcone6.png" />
+    <None Include="Imagens\Icones\Save-Icone.ico" />
+    <None Include="Imagens\FlechaEsquerdaIcone.png" />
+    <None Include="Imagens\FlechaDireitaIcone.png" />
+    <None Include="Imagens\Carregando2.gif" />
+    <None Include="Imagens\MaisIcone2.png" />
+    <None Include="Imagens\Icones\AssentoIcone.ico" />
+    <None Include="Imagens\AdicionarIcone1.png" />
+    <None Include="Imagens\MenuIcone.png" />
+    <None Include="Imagens\AjudaIcone2.png" />
+    <None Include="Imagens\LockIcone.png" />
+    <None Include="Imagens\InternetIcone.png" />
+    <None Include="Imagens\CEPIcone.png" />
+    <None Include="Imagens\icons8_Password_1_104px.png" />
+    <None Include="Imagens\InternetIcone2.png" />
+    <None Include="Imagens\EntrarIcone.png" />
+    <None Include="Imagens\CEPIcone2.png" />
+    <None Include="Imagens\ContaIcone2.png" />
+    <None Include="Imagens\AdicionarIcone2.png" />
+    <None Include="Imagens\ConfirmarIcone.png" />
+    <None Include="Imagens\icons8_Checked_48px_2.png" />
+    <None Include="Imagens\MenuIcone1.png" />
+    <None Include="Imagens\FuncaoIcone.png" />
+    <None Include="Imagens\ComprasIcone2.png" />
+    <None Include="Imagens\EscolherIcone.png" />
+    <None Include="Imagens\DesativarIcone2.png" />
+    <None Include="Imagens\ExcluirIcone11.png" />
+    <None Include="Imagens\ComprasIcone21.png" />
+    <None Include="Imagens\CapsLockIcone.png" />
+    <None Include="Imagens\GraficoIcone.png" />
+    <None Include="Imagens\ContaIcone21.png" />
+    <Content Include="favicon.ico" />
+    <None Include="Imagens\LogoComCortina2.jpeg" />
+    <None Include="Imagens\LimparIcone.png" />
+    <None Include="Imagens\DescontoIcone2.png" />
+    <None Include="Imagens\DinheiroIcone3.png" />
+    <None Include="Imagens\AssentoIcone311.png" />
+    <None Include="Imagens\AssentoIcone32.png" />
+    <None Include="Imagens\AssentoIcone42.png" />
+    <None Include="Imagens\AssentoIcone33.png" />
+    <None Include="Imagens\HomeIcone.png" />
+    <Content Include="Imagens\mictransp-comBorda.png" />
+    <Content Include="Imagens\mictransp.png" />
+    <Content Include="Imagens\mictransp2.png" />
+    <None Include="Imagens\PasswordIcone.png" />
+    <None Include="Imagens\UserIcone.png" />
+    <None Include="Imagens\ProcurarIcone.png" />
+    <None Include="Imagens\ResidenciaIcone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

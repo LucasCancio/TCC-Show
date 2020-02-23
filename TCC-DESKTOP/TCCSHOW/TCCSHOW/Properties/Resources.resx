@@ -1,0 +1,745 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="GeneroIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\GeneroIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FundoDegrade2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\FundoDegrade2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="facebookIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\facebookIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InternetIcone3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\InternetIcone3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EditarIcone4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\EditarIcone4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BinoculosIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\BinoculosIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ExcluirIcone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ExcluirIcone1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AlocarIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\AlocarIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AssentoIconeDuplo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\AssentoIcone3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TwitterIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\TwitterIcone.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EventoEditarIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\EventoEditarIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TelaAjuda_BotaoAdicionarArtista" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\TelaAjuda-BotaoAdicionarArtista.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RelatorioIcone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\RelatorioIcone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EditarIconeContato" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\EditarIcone51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FlechaDireitaIcone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\FlechaDireitaIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ProcurarIcone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ProcurarIcone1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ValidarIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ValidarIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AdicionarContaIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\AdicionarContaIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IdadeIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\IdadeIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AssentoIconeDuploRemovido" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\AssentoIcone32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EscolherIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\EscolherIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AdicionarIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\AdicionarIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MaisIcone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\MaisIcone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ImprimirIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ImprimirIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SetorIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\SetorIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EditarIconeArtista" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\EditarIconeArtista.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QuestionIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\QuestionIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eventoIcone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\eventoIcone1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AjudaIcone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\AjudaIcone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EditarIcone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\EditarIcone1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\mic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HumoristaAdicionarIcone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\HumoristaAdicionarIcone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AssentoIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\AssentoIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FuncaoIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\FuncaoIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CapsLockIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\CapsLockIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DinheiroIcone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\DinheiroIcone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Voltar_Icone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\Voltar Icone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ExcluirIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ExcluirIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EditarIcone5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\EditarIcone5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DesativarIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\DesativarIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BaixarIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\BaixarIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CEPIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\CEPIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UnlockIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\UnlockIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mictransp2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\mictransp2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TelaAjuda_BotaoEditarEvento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\TelaAjuda-BotaoEditarEvento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TelaAjuda_BotaoEditarArtista" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\TelaAjuda-BotaoEditarArtista.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_Password_1_104px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\icons8_Password_1_104px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Especial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\Especial.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eventoIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\eventoIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EditarIcone7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\EditarIcone7.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocumentoIcone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\DocumentoIcone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EntrarIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\EntrarIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MouseDireitoIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\MouseDireitoIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SistemaIcone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\SistemaIcone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NovidadesIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\NovidadesIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ProcurarIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ProcurarIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AssentoRemovido" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\AssentoIcone41.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PessoaIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\PessoaIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EditarIcone11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\EditarIcone11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="XIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\XIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WhatsApp_Image_2017_05_07_at_14_45_07" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\WhatsApp Image 2017-05-07 at 14.45.07.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Pontos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\Pontos.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DinheiroIcone3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\DinheiroIcone3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EditarIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\EditarIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WarningIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\WarningIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TelaAjuda_Hub_Eventos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\TelaAjuda-Hub-Eventos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InstragamIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\InstragamIcone.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TelaAjuda_Hub" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\TelaAjuda-Hub.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SetaCimaIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\SetaCimaIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="User2Icone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\User2Icone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ResidenciaIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ResidenciaIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FundoTeste" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\FundoTeste.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AssentoIconePadraoSelect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\AssentoIcone42.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuIcone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\MenuIcone1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenuIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\MenuIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="User3Icone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\User3Icone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="respostaIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\respostaIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GraficoIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\GraficoIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ExcluirIcone11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ExcluirIcone11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="relogioIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\relogioIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DocumentoIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\DocumentoIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LockIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\LockIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ValidarIcone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ValidarIcone1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AtivarIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\DesativarIcone1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SistemaIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\SistemaIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="relogioIcon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\relogioIcon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mictransp2_SemBorda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\mictransp2-SemBorda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EditarIcone61" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\EditarIcone61.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AssentoIcone5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\AssentoIcone5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HAHAHA" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\HAHAHA.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DinheiroIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\DinheiroIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_Checked_48px_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\icons8_Checked_48px_2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ValidarIcone3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ValidarIcone3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IngressoIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\IngressoIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DesativarIcone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\DesativarIcone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="twitterIcone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\twitterIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TecladoIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\TecladoIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mictransp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\mictransp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AdicionarIcone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\AdicionarIcone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AtivarIcone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\DesativarIcone14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ComprasIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ComprasIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_Reset_10px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\icons8_Reset_10px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carregando21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\Carregando21.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="GerenciarIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\GerenciarIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DescontoIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\DescontoIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Save_Icone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\Save Icone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_Fit_to_Width_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\icons8_Fit_to_Width_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EditarIcone12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\EditarIcone12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HumoristaAdicionarIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\HumoristaAdicionarIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FlechaDireitaIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\FlechaDireitaIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EmpresaIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\EmpresaIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BinoculosIcone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\BinoculosIcone1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ContaIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ContaIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="instagramIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\instagramIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ArtistaIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ArtistaIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ValidarIcone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ValidarIcone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MostrarSenhaIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\MostrarSenhaIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RecepcaoIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\RecepcaoIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="RelatorioIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\RelatorioIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carregando" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\Carregando.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AssentoIconePadrao" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\AssentoIcone4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TelaAjuda_Hub_Artistas" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\TelaAjuda-Hub-Artistas.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PasswordIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\PasswordIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BinoculosIconeBranco" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\BinoculosIcone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ContaIcone21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ContaIcone21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AssentoIconeEspecialRemovido" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\AssentoIcone311.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AdicionarIcone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\AdicionarIcone1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ResidenciaIcone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ResidenciaIcone1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="musica" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\musica.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AssentoIconeEspecial" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\AssentoIcone31.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HumoristaAdicionarIcone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\HumoristaAdicionarIcone1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PasswordIcone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\PasswordIcone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ConfirmarIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ConfirmarIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ContaIcone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ContaIcone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ReiniciarIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ReiniciarIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Voltar_Icone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\Voltar Icone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UserIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\UserIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="WarningIcone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\WarningIcone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="SetaCimaIcone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\SetaCimaIcone1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ComprasIcone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ComprasIcone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LogoComCortina2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\LogoComCortina2.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Fundo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\Fundo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PerguntaIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\PerguntaIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TelefoneIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\TelefoneIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eventoIcone11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\eventoIcone11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="NovidadesIcone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\NovidadesIcone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="twitterIcone11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\twitterIcone1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UserIcone4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\UserIcone4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="LimparIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\LimparIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EventoAdicionarIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\EventoAdicionarIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MinimizarIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\MinimizarIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FundoDegrade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\FundoDegrade.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_Fit_to_Width_52px_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\icons8_Fit_to_Width_52px_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EditarIconePreto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\EditarIcone3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DivIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\DivIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AssentoIcone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\AssentoIcone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MICTRANSP___VERMELHO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\MICTRANSP - VERMELHO;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="FuncionarioIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\FuncionarioIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InternetIcone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\InternetIcone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AssentoIconeEspecialSelect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\AssentoIcone3121.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HumoristaAdicionarIcone4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\HumoristaAdicionarIcone4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DescontoIcone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\DescontoIcone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CortinaTransp" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\CortinaTransp.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carregando22" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\Carregando22.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EventoAdicionarIcone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\EventoAdicionarIcone1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="DinheiroIcone4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\DinheiroIcone4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AssentoProcurarIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\AssentoProcurarIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MouseDireitoIcone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\MouseDireitoIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HumoristaAdicionarIcone11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\HumoristaAdicionarIcone11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="mictransp_comBorda" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\mictransp-comBorda.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TelaAjuda_BotaoAdicionarEvento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\TelaAjuda-BotaoAdicionarEvento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TelaCheiaIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\TelaCheiaIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ConfigIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ConfigIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UserIcone3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\UserIcone3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MaisIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\MaisIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FundoInternet" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\FundoInternet.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ArtistaIcone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ArtistaIcone1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FiltroIcon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\FiltroIcon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TELA_TESTE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\TELA-TESTE.psd;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="TelaAjuda_BotaoProcurarAssento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\TelaAjuda-BotaoProcurarAssento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UserIcone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\UserIcone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="XIcone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\XIcone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="InternetIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\InternetIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AssentoIconeDuploSelect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\AssentoIcone33.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="UserIcone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\UserIcone1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FlechaEsquerdaIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\FlechaEsquerdaIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MenosIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\MenosIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotaoDeslogar1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\BotaoDeslogar1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CEPIcone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\CEPIcone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PasswordIcone1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\PasswordIcone1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="EditarIconeEvento" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\EditarIconeEvento.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TelaAjuda_Hub_Assentos" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\TelaAjuda-Hub-Assentos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ComprasIcone21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ComprasIcone21.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icons8_Reset_96px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\icons8_Reset_96px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HomeIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\HomeIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CaixaValidar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ValidarIcone4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="BotaoDeslogar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\BotaoDeslogar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CortinaPano" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\CortinaPano.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="FiltroIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\FiltroIcon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="HumoristaAdicionarIcone3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\HumoristaAdicionarIcone3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AdministracaoIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\AdministracaoIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="AjudaIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\AjudaIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ComprasIcone3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ComprasIcone3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Carregando2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\Carregando2.gif;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="MoedasIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\MoedasIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ScannerIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\ScannerIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QrCodeIcone" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\QrCodeIcone.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="QrCodeIcone2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Imagens\QrCodeIcone2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+</root>

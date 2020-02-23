@@ -1,0 +1,271 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ModeloOn.master.cs" Inherits="Boots.ModeloOn" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="icon" href="img/mic.png" />
+   <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="../Scripts/jquery-3.3.1.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/bootstrap.bundle.min.js"></script>
+    <script src="../Scripts/jquery.maskedinput.min.js"></script>
+      <link rel="stylesheet" href="~/css/all.min.css">
+    <!-- Plugin JavaScript -->
+    <%-- <script src="vendor/jquery-easing/jquery.easing.min.js"></script>--%>
+
+    <!-- Custom scripts for this template -->
+    <%-- <script src="js/new-age.min.js"></script>--%>
+    <style type="text/css">
+        body {
+            font-family: Quicksand;
+        }
+
+        #mainNav {
+            color: white;
+            background-color: rgb(145,0,0);
+        }
+
+        .masthead {
+            background-image: url('img/hahaha3.jpeg');
+            background-attachment: fixed;
+            background-size: cover;
+            /*background-color: #050000;*/
+            color: white;
+        }
+
+        .cta-content {
+            background-image: url('img/papel2.jpg');
+            width: 100%;
+        }
+
+        #contact {
+            text-align: center;
+            background-color: rgb(145,0,0);
+            color: white;
+        }
+
+        #download {
+            background-color: rgb(145,0,0);
+            color: white;
+        }
+
+        #titulo, #lblArtista, #lblAgenda, #lblPerfil, #lblAjuda, #lblFeed, #Label5 {
+            color: white;
+        }
+
+        footer {
+            background-color: #050000;
+            text-align: center;
+            color: white;
+        }
+
+        #cont {
+            text-align: center;
+        }
+
+        #nome {
+            text-align: left;
+        }
+
+        .feature-item {
+            text-align: center;
+        }
+
+        .nav-link js-scroll-trigger:hover, .navbar-brand js-scroll-trigger:hover {
+            text-decoration: underline;
+        }
+
+        #lblAgenda:hover, #lblArtista:hover, #lblPerfil:hover, #lblAjuda:hover, #lblFeed:hover {
+            background-color: rgb(198, 38, 38);
+        }
+
+        #co {
+            width: 90%;
+        }
+    </style>
+
+
+    <title>Comedy House</title>
+    <link rel="shortcut icon" href="~/img/favicon.ico" />
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body runat="server">
+    <form runat="server">
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+
+            <div class="container" id="co">
+                <asp:Label ID="Label1" CssClass="nav-link js-scroll-trigger" runat="server">Olá,
+                    <asp:LoginName runat="server" Font-Bold="true" ID="LoginName1" ForeColor="Yellow"></asp:LoginName>
+                    ! Bem vindo(a) à
+                    <asp:HyperLink ID="titulo" CssClass="navbar-brand js-scroll-trigger" Font-Bold="true" NavigateUrl="~/ComLogin/HomeOn.aspx" runat="server" Text="Comedy House!"></asp:HyperLink></asp:Label>
+                <%--<a class="navbar-brand js-scroll-trigger" href="#page-top" id="titulo">Comedy House</a>--%>
+                <%--<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            </button>--%>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <%--<li class="nav-item">
+                        <a class="navbar-toggler js-scroll-trigger" href="#page-top" id="titulo2">Comedy House</a>
+                    </li>--%>
+                        <%--<li class="nav-item">
+                        <asp:Label ID="Label5" CssClass="nav-link js-scroll-trigger" runat="server">Olá, <asp:LoginName runat="server" ID="lblNome" ForeColor="Yellow"></asp:LoginName>!</asp:Label>
+                    </li>--%>
+                        <li class="nav-item" id="fundoArtista">
+                            <asp:HyperLink ID="lblArtista" CssClass="nav-link js-scroll-trigger" NavigateUrl="~/ComLogin/ArtistasOn.aspx" runat="server" Text="Artistas"></asp:HyperLink>
+                        </li>
+                        <li class="nav-item" id="fundoAgenda">
+                            <asp:HyperLink ID="lblAgenda" CssClass="nav-link js-scroll-trigger" NavigateUrl="~/ComLogin/AgendaOn.aspx" runat="server" Text="Agenda"></asp:HyperLink>
+                        </li>
+                        <li class="nav-item" id="fundoAjuda">
+                            <asp:HyperLink ID="lblAjuda" CssClass="nav-link js-scroll-trigger" NavigateUrl="~/ComLogin/AjudaOn.aspx" runat="server" Text="Ajuda"></asp:HyperLink>
+                        </li>
+                        <li class="nav-item" id="fundoPerfil">
+                            <asp:HyperLink ID="lblPerfil" CssClass="nav-link js-scroll-trigger" NavigateUrl="~/ComLogin/PerfilOn.aspx" runat="server" Text="Perfil"></asp:HyperLink>
+                        </li>
+                        <li class="nav-item" id="fundoFeedBack">
+                            <asp:HyperLink ID="lblFeed" CssClass="nav-link js-scroll-trigger" NavigateUrl="~/ComLogin/FeedbackOn.aspx" runat="server" Text="Feedbacks"></asp:HyperLink>
+                        </li>
+                        <li class="nav-item">
+                            <asp:LoginStatus ID="LoginStatus1" runat="server" CssClass="nav-link js-scroll-trigger" LogoutText="Sair" Font-Bold="True" ForeColor="White" LogoutAction="RedirectToLoginPage" LoginText="Sair" OnLoggedOut="LoginStatus1_LoggedOut" OnLoggingOut="LoginStatus1_LoggingOut" />
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+        <section class="download text-center" id="download">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 mx-auto">
+                        <br />
+                        <h2 class="section-heading">Já baixou nosso app?</h2>
+                        <p>Ele já está na Play Store e na App Store! Baixe agora!</p>
+                        <div class="badges">
+                            <asp:HyperLink ID="HyperLink1" CssClass="badge-link" runat="server" NavigateUrl="https:\\play.google.com/store">
+                                <asp:Image ID="Image2" ImageUrl="~/img/appstore.png" Width="200px" runat="server" />
+                            </asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink2" CssClass="badge-link" runat="server" NavigateUrl="http:\\www.apple.com/br/ios/app-store/">
+                                <asp:Image ID="Image1" ImageUrl="~/img/playstore.png" Width="200px" runat="server" />
+                            </asp:HyperLink>
+                            <br />
+                            <br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features" id="features">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <br />
+                    <h2>Principais Funcionalidades</h2>
+                    <hr>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 my-auto">
+                        <div class="device-container">
+                            <div class="device-mockup iphone6_plus portrait white">
+                                <div class="device">
+                                    <div class="screen" style="text-align: center;">
+                                        <asp:Image ID="Image7" ImageUrl="~/img/celular2.jpeg" Width="85%" CssClass="img-fluid" runat="server" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 my-auto">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="feature-item">
+                                        <%--<i class="icon-screen-smartphone text-primary"></i>--%>
+                                        <asp:Image ID="Image6" ImageUrl="~/img/UserIcone.png" Width="40%" Height="140px" runat="server" />
+                                        <h3>Perfil de Usuário</h3>
+                                        <p class="text-muted">Tenha acesso total aos seus dados e histórico de compras.</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="feature-item">
+                                        <%--<i class="icon-camera text-primary"></i>--%>
+                                        <asp:Image ID="Image5" ImageUrl="~/img/desconto.png" Width="40%" Height="140px" runat="server" />
+                                        <h3>Descontos exclusivos!</h3>
+                                        <p class="text-muted">Quem baixa o app recebe descontos <b>exclusivos</b> na Casa!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="feature-item">
+                                        <%--<i class="icon-present text-primary"></i>--%>
+                                        <asp:Image ID="Image4" ImageUrl="~/img/qr.png" Width="40%" Height="140px" runat="server" />
+                                        <h3>Ingresso no QR Code!</h3>
+                                        <p class="text-muted">Evite filas possuindo o ingresso em seu celular!</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="feature-item">
+                                        <%--<i class="icon-lock-open text-primary"></i>--%>
+                                        <asp:Image ID="Image3" ImageUrl="~/img/novi.png" Width="40%" Height="140px" runat="server" />
+                                        <h3>Novidades</h3>
+                                        <p class="text-muted">Com o app, você fica por dentro das últimas novidades!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <br />
+        <section class="contact" id="contact">
+            <br />
+            <div class="container">
+                <h2>Siga-nos nas Redes Sociais!</h2>
+                <br />
+                <ul class="list-inline list-social">
+                    <li class="list-inline-item social-twitter">
+                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="http:\\www.facebook.com">
+                            <asp:Image ID="Image8" ImageUrl="~/img/face2.png" Width="100px" runat="server" />
+                        </asp:HyperLink>
+                    </li>
+                    <li class="list-inline-item social-facebook">
+                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="http:\\www.twitter.com">
+                            <asp:Image ID="Image9" ImageUrl="~/img/twitter.png" Width="100px" runat="server" />
+                        </asp:HyperLink>
+                    </li>
+                    <li class="list-inline-item social-google-plus">
+                        <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="http:\\www.instagram.com">
+                            <asp:Image ID="Image10" ImageUrl="~/img/insta.png" Width="100px" runat="server" />
+                        </asp:HyperLink>
+                    </li>
+                    <%--<li class="list-inline-item social-youtube">
+                    <asp:HyperLink ID="HyperLink6" runat="server" NavigateUrl="http:\\www.youtube.com">
+                        <asp:Image ID="Image11" ImageUrl="~/img/yout.png" Width="100px" runat="server" />
+                    </asp:HyperLink>
+                </li>--%>
+                </ul>
+            </div>
+            <br />
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <br />
+                <p>Powered by <b>Equipe 05</b></p>
+                <p>2018</p>
+                <br />
+            </div>
+        </footer>
+
+    </form>
+</body>
+</html>

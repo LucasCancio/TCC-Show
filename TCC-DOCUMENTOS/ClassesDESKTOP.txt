@@ -1,0 +1,483 @@
+*Artista: 
+
+-Membros:
+
+ID_ARTISTA_GERAL
+ID_TIPO_PESSOA
+ID_PESSOA
+ID_AGENTE
+ID_ENDERECO
+ID_REDESOCIAL
+DATALISTARFINAL
+DATALISTARINICIAL
+SEXO
+URL_IMG
+TELEFONE
+NOME
+FACEBOOK
+TWITTER
+INSTAGRAM
+EMAIL
+SOCIAL
+DATADECRIACAO
+DATANASC
+ATIVO
+CPF
+
+-Metodos:
+
+ConsultarValorMaximo- frmArtistaCadastro
+Verificar- frmArtistaCadastro, frmArtistaConsulta
+Ativar- frmArtistaConsulta
+ConsultarPessoa- frmLog
+ConsultarNormal- frmArtistaCadastro
+ConsultarFixo- frmArtistaCadastro
+ListarGeral- frmArtistaConsulta, frmEventoCadastro,frmProcurarArtista
+VerificarEvento- frmArtistaConsulta
+ConsultarCPF- frmArtistaCadastro
+Artista_crud- frmArtistaConsulta, frmArtistaCadastro
+
+
+
+
+*Assento:
+
+-Membros:
+
+ID_ASSENTO
+ID_TIPOASSENTO
+ID_SETOR
+VALOR
+ASSENTO_NUMER
+ASSENTO_FILEIRA
+
+-Metodos:
+
+AlterarPrecos- frmPrecos
+ConsultarPercentual- frmAssentoProcurar
+ConsultarValor2- frmPrecos
+ConsultarAssento- frmAssentoPagamento
+ConsultarValorMaximo- frmAssentoPagamento
+
+
+
+
+
+*CEP:
+
+-Membros:
+
+ID_ENDERECO
+CEP
+NUMERO
+COMPLEMENTO
+
+-Metodos:
+
+Consultar- frmAgenteCadastro,frmArtistaCadastro,frmFuncionarioCadastro
+Endereco_crud- frmAgenteCadastro,frmArtistaCadastro,frmFuncionarioCadastro
+
+
+
+
+*Cliente:
+
+-Membros:
+
+ID_CLIENTE
+ID_ASSENTO
+ID_EVENTO
+ID_TIPO_PESSOA
+ID_PESSOA
+NOME
+DATADECRIACAO
+DATALISTARINICIO
+DATALISTARFINAL
+DATANASC
+ATIVO
+CPF
+EMAIL
+
+-Metodos:
+
+ConsultarPessoa- frmLog
+ConsultarValorMaximo- frmAssentoPrincipal, frmClienteCadastro
+ConsultarPorCliente- frmAssentoProcurar
+Consultar- frmIngresso, frmClienteCadastro
+Ativar- frmClienteConsulta
+ListarGeral- frmClienteConsulta, frmProcurarCliente
+ListarHistorico- frmClienteCadastro
+ConsultarCPF- frmClienteCadastro
+Cliente_crud- frmClienteCadastro, frmClienteConsulta
+
+
+
+
+*Contas:
+
+-Membros:
+
+ID_CONTAS
+ID_VENDA
+ID_DATACONTA
+DATA
+DATALISTARFINAL
+DATALISTARINICIO
+DATA_ENTREGUE
+DATA_LANCAMENTO
+TIPO_CONTA
+TIPO_DATA
+DESCRICAO
+DEPARTAMENTO
+FORMA_PAGAMENTO
+SITUACAO
+VALOR_TOTAL
+ATIVO
+ID_FORMA_PAGAMENTO
+
+-Metodos:
+
+ConsultarValorMaximo- frmContasCadastro
+ExcluirFormaPag- frmContasCadastro
+IncluirVenda- frmAssentoPagamento
+IncluirFormaPag- frmContasCadastro, frmContasCadastro
+Ativar- frmContasConsulta
+ConsultarFormas- frmContasCadastro
+ListarGeral- frmContasConsulta, frmProcurarConta
+ListarGrafico- frmContasRelatorio
+Consultar- frmContasCadastro, frmLog
+ConsultarVenda- frmContasConsulta
+Contas_crud- frmContasCadastro, frmContasCadastro, frmAssentoPagamento
+
+
+
+
+*Desconto:
+
+-Membros:
+
+ID_DESCONTO
+ID_CLIENTE
+DESCONTO
+COD_PROMOCIONAL
+N_USOS
+ATIVO
+
+-Metodos:
+
+Consultar- frmAssentoPagamento
+ConsultarPorId- frmLog
+ConsultarValorMaximo- frmDescontos
+Listar- frmDescontos
+Descontos_crud- frmAssentoPagamento, frmDescontos
+
+
+
+
+*Empresario:
+
+-Membros:
+
+ID_AGENTE
+ID_PESSOA
+ID_ENDERECO
+DOCUMENTO
+TELEFONE
+EMAIL
+NOMEPRINCIPAL
+NOMESECUNDARIO
+TIPOPESSOA
+DATADECRIACAO
+DATALISTARINICIO
+DATALISTARFINAL
+ATIVO
+
+-Metodos:
+
+Ativar- frmAgenteConsulta
+VerificarArtista- frmAgenteConsulta
+ConsultarGeral- frmAgenteCadastro, frmLog
+ConsultarValorMaximo- frmAgenteCadastro
+ConsultarDocumento- frmAgenteCadastro
+ListarGeral- frmAgenteConsulta, frmProcurarAgente
+Agente_crud- frmAgenteConsulta, frmAgenteCadastro
+
+
+
+
+*Evento:
+
+-Membros:
+
+ID_EVENTO
+ID_ARTISTA_GERAL
+DATAEVENTO
+HORARIOINICIO
+HORARIOFINAL
+TITULO
+DATALISTARFINAL
+DATALISTARINICIO
+DURACAO
+DESCRICAO
+TIPO_PAG
+ATIVO
+N_ARTISTAS
+VALOR_EVENTO
+
+-Metodos:
+
+ConsultarValorMaximo- frmEventoCadastro
+IncluirEventoArtista- frmEventoCadastro
+AdicionarEventoArtista- frmEventoCadastro
+Ativar- frmEventoConsulta
+ExcluirArtista- frmEventoCadastro
+Consultar- frmEventoCadastro, frmLog, frmAssentoPrincipal, frmIngresso
+Verificar- frmEventoConsulta
+VerificarIngresso- frmEventoConsulta
+ListarID_e_TITULO- frmAssentoPrincipal
+ListarDIA- frmEventoCadastro
+ListarGeral- frmEventoConsulta, frmProcurarEvento
+ListarArtistasDoEvento- frmEventoCadastro, frmAssentoPrincipal, frmIngresso
+Evento_crud- frmEventoCadastro, frmEventoConsulta
+
+
+
+
+*FormaPagamento:
+
+-Membros:
+
+ID_FORMA_PAGAMENTO
+FORMA_PAGAMENTO
+
+-Metodos:
+
+ConsultarPorId- frmLog
+ConsultarValorMaximo- frmFormaDePag
+ListarComboBox- frmAssentoPagamento, frmContasCadastro, frmContasFiltro
+Listar- frmFormaDePag
+FormaDePag_crud- frmFormaDePag
+
+
+
+
+*Funcao:
+
+-Membros:
+
+ID_FUNCAO
+FUNCAO
+
+-Metodos:
+
+ConsultarPorId- frmLog
+ConsultarValorMaximo- frmFuncao
+ListarComboBox- frmFuncionarioFiltro, frmFuncionarioCadastro
+Listar- frmFuncao
+VerificarFuncionario- frmFuncao
+Funcao_crud- frmFuncao
+
+
+
+
+*Funcionario:
+
+-Membros:
+
+ID_FUNCIONARIO
+SEXO
+DATALISTARFINAL
+DATALISTARINICIO
+ID_FUNCAO
+ID_ENDERECO
+ID_PESSOA
+NOME
+ATIVO
+DATA_NASC
+TELEFONE
+EMAIL
+CPF
+
+-Metodos:
+
+ConsultarPessoa- frmLog
+ConsultarNomePessoa- frmLog
+ConsultarValorMaximo- frmFuncionarioCadastro
+Ativar- frmFuncionarioConsulta
+Consultar- frmFuncionarioCadastro, frmCancelarVenda
+ConsultarCPF- frmFuncionarioCadastro
+Consultar2- frmFuncionarioCadastro
+ListarGeral- frmFuncionarioConsulta, frmProcurarFuncionario
+Funcionario_crud- frmFuncionarioConsulta, frmFuncionarioCadastro
+
+
+
+
+*Ingresso:
+
+-Membros:
+
+ID_FUNC
+ID_CLIENTE
+MOTIVO
+ID_EVENTO
+ID_EI
+DATALISTARFINAL
+DATALISTARINICIO
+ID_VENDA
+ID_PAGAMENTO
+PRECO_TOTAL
+SITUACAO
+PRECO_TOTAL_PAGO
+DESCONTO
+TROCO
+ATIVO
+
+-Metodos:
+
+IncluirEventoIngresso- frmAssentoPagamento
+IncluirPagamento- frmAssentoPagamento
+IncluirVendaIngresso- frmAssentoPagamento
+IncluirAssentoCliente- frmAssentoPagamento
+IncluirItemVenda- frmAssentoPagamento
+Cancelar- frmCancelarVenda
+ConsultarPorEvento- frmAssentoPrincipal, frmAssentoProcurar
+ConsultarReembolso- frmCancelarVenda
+ConsultarPorCliente- frmAssentoPagamento
+ConsultarValidade- frmAssentoQRCODE
+ListarIngresso- frmIngressoConsultar
+ListarIngressoAssento- frmIngresso
+ListarFormasPag- frmIngresso
+ListarGrafico- frmContasRelatorio
+
+
+
+
+*Log:
+
+-Membros:
+
+ID_LOG
+TIPO_LOG
+DESCRICAO
+DATA_LOG
+ID_FUNC
+ID_MODIFICADO
+TABELA_LOG
+DATALISTARFINAL
+DATALISTARINICIO
+
+-Metodos:
+
+Listar- frmLog
+ConsultarExcluido- frmLog
+Log_crud- frmAgenteCadastro, frmAgenteConsulta, frmArtistaCadastro, frmArtistaConsulta, frmClienteCadastro, frmClienteConsulta, frmContasCadastro, frmContasConsulta, frmDescontos, frmEventoCadastro, frmEventoConsulta, frmFormasDePag, frmFuncao, frmFuncionarioCadastro, frmFuncionarioConsulta, Hub, Login
+
+
+
+
+*Login:
+
+-Membros:
+
+ID_LOGIN
+ID_PESSOA
+ID_FUNC
+ID_CLI
+USUARIO
+NOME
+NIVEL_ACESSO
+ID_NIVELACESSO
+SENHA
+DATAULTIMOACESSO
+PERGUNTASECRETAID
+DESCRICAO
+ATIVO
+DATALISTARINICIO
+DATALISTARFINAL
+
+-Metodos:
+
+RecuperarDadosTrocaSenha- frmLogin
+ListarGeral- frmUsuarioGerenciar
+AlterarSenha- frmPergunta
+ConsultarFunc- frmUsuarioGerenciar
+ConsultarCli- frmUsuarioGerenciar
+Logar- Login
+Login_crud- Login, frmLoginNovo, frmClienteCadastro, frmFuncionarioCadastro
+SpIniciar- Hub
+ConsultarUsuario- frmLoginNovo, frmClienteCadastro, frmFuncionarioCadastro
+
+
+
+
+*Novidades:
+
+-Membros:
+
+ID_BANNER
+URL_IMG
+ATIVO
+INDEX_BANNER
+
+-Metodos:
+
+MudarDeLugar- frmNovidades
+Consultar- frmNovidades
+ConsultarAtivo- frmNovidades
+ConsultarTamanho- frmNovidades
+Novidades_crud- frmNovidades
+
+
+
+
+*PerguntaSecreta:
+
+-Membros:
+
+PERGUNTASECRETAID
+DESCRICAO
+RESPOSTA
+ATIVO
+
+-Metodos:
+
+Consultar- Login
+
+
+
+
+*Pessoa:
+
+-Membros:
+
+ID_PESSOA
+NOME
+ID_TIPO_PESSOA
+DATA_NASC
+DATA_CRIACAO
+SEXO
+ATIVO
+
+-Metodos:
+
+Pessoa_crud- frmArtistaCadastro, frmClienteCadastro,frmFuncionarioCadastro
+
+
+
+
+
+*ValidadorCNPJ:
+
+-Metodos:
+
+ValidarCNPJ- frmAgenteCadastro
+
+
+
+
+*ValidadorCPF:
+
+-Metodos:
+
+ValidarCPF- frmAgenteCadastro, frmClienteCadastro, frmArtistaCadastro, frmFuncionarioCadastro

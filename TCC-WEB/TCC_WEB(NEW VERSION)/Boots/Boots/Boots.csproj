@@ -1,0 +1,545 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D6786954-2D3B-4050-B430-71C9296927A6}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Boots</RootNamespace>
+    <AssemblyName>Boots</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TypeScriptToolsVersion>3.0</TypeScriptToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.1.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.18.1.1\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BoletoBancario.aspx" />
+    <Content Include="ComLogin\AgendaOn.aspx" />
+    <Content Include="ComLogin\AjudaOn.aspx" />
+    <Content Include="ComLogin\ArtistasOn.aspx" />
+    <Content Include="ComLogin\FeedbackOn.aspx" />
+    <Content Include="ComLogin\HomeOn.aspx" />
+    <Content Include="ComLogin\IngressoOn.aspx" />
+    <Content Include="ComLogin\MostrarArtistaOn.aspx" />
+    <Content Include="ComLogin\MostrarEventoOn.aspx" />
+    <Content Include="ComLogin\PagamentoOn.aspx" />
+    <Content Include="ComLogin\PerfilOn.aspx" />
+    <Content Include="Content\bootstrap-grid.css" />
+    <Content Include="Content\bootstrap-grid.min.css" />
+    <Content Include="Content\bootstrap-reboot.css" />
+    <Content Include="Content\bootstrap-reboot.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="css\all.css" />
+    <Content Include="css\all.min.css" />
+    <Content Include="css\brands.css" />
+    <Content Include="css\brands.min.css" />
+    <Content Include="css\fontawesome.css" />
+    <Content Include="css\fontawesome.min.css" />
+    <Content Include="css\regular.css" />
+    <Content Include="css\regular.min.css" />
+    <Content Include="css\solid.css" />
+    <Content Include="css\solid.min.css" />
+    <Content Include="css\svg-with-js.css" />
+    <Content Include="css\svg-with-js.min.css" />
+    <Content Include="css\v4-shims.css" />
+    <Content Include="css\v4-shims.min.css" />
+    <Content Include="imgBoleto\b.gif" />
+    <Content Include="imgBoleto\barra.gif" />
+    <Content Include="imgBoleto\BBLogo.gif" />
+    <Content Include="imgBoleto\BradescoLogo.gif" />
+    <Content Include="imgBoleto\corte.gif" />
+    <Content Include="imgBoleto\p.gif" />
+    <Content Include="img\AgendaIcone.png" />
+    <Content Include="img\AjudaIcone.png" />
+    <Content Include="img\appstore.png" />
+    <Content Include="img\ArtistaIcone1.png" />
+    <Content Include="img\AssentoIcone.png" />
+    <Content Include="img\AssentoIconeEspecialRemovido.png" />
+    <Content Include="img\AssentoIconeEspecialSelect.png" />
+    <Content Include="img\AssentoIconeDuploRemovido.png" />
+    <Content Include="img\AssentoIconeDuploSelect.png" />
+    <Content Include="img\AssentoIconePadraoSelect.png" />
+    <Content Include="img\assentos1.jpeg" />
+    <Content Include="img\aviso.jpg" />
+    <Content Include="img\ban1.jpg" />
+    <Content Include="img\ban2.jpg" />
+    <Content Include="img\ban3.jpeg" />
+    <Content Include="img\ban4.jpg" />
+    <Content Include="img\BannerProibidoMenor.jpeg" />
+    <Content Include="img\Barbixas.jpg" />
+    <Content Include="img\bklanche.jpg" />
+    <Content Include="img\boleto.png" />
+    <Content Include="img\BotaoDeslogar.png" />
+    <Content Include="img\btn_buynow_LG.gif" />
+    <Content Include="img\burger_king1.jpg" />
+    <Content Include="img\burger_king2.jpg" />
+    <Content Include="img\burger_king3.jpg" />
+    <Content Include="img\ceara.jpg" />
+    <Content Include="img\celular.png" />
+    <Content Include="img\celular2.jpeg" />
+    <Content Include="img\CH1.jpg" />
+    <Content Include="img\CH2.JPG" />
+    <Content Include="img\ComedyImagem.png" />
+    <Content Include="img\Credit.png" />
+    <Content Include="img\Danilo.jpg" />
+    <Content Include="img\debit.png" />
+    <Content Include="img\desconto.png" />
+    <Content Include="img\AssentoIconeDuplo.png" />
+    <Content Include="img\DuploOcupado.png" />
+    <Content Include="img\DuploSelec.png" />
+    <Content Include="img\email.png" />
+    <Content Include="img\endereco.png" />
+    <Content Include="img\EntrarIcone.png" />
+    <Content Include="img\AssentoIconeEspecial.png" />
+    <Content Include="img\EspecialOcupado.png" />
+    <Content Include="img\EspecialSelec.png" />
+    <Content Include="img\EstrelaCheia.png" />
+    <Content Include="img\EstrelaSelect.png" />
+    <Content Include="img\EstrelaVazia.png" />
+    <Content Include="img\Fabio Porchat.jpg" />
+    <Content Include="img\face2.png" />
+    <Content Include="img\favicon.ico" />
+    <Content Include="img\FlechaDireitaIcone.png" />
+    <Content Include="img\FlechaEsquerdaIcone.png" />
+    <Content Include="img\fone.png" />
+    <Content Include="img\GiganteLeo.jpg" />
+    <Content Include="img\hahaha3.jpeg" />
+    <Content Include="img\IconeTesoura.jpg" />
+    <Content Include="img\icons8_Checked_48px_2.png" />
+    <Content Include="img\Indisponivel.png" />
+    <Content Include="img\insta.png" />
+    <Content Include="img\JacksonFive.jpg" />
+    <Content Include="img\JacksonFive.png" />
+    <Content Include="img\kevin.jpg" />
+    <Content Include="img\luque.jpg" />
+    <Content Include="img\marco.jpg" />
+    <Content Include="img\mastercard.png" />
+    <Content Include="img\mic.png" />
+    <Content Include="img\Michael.jpeg" />
+    <Content Include="img\mostrarsenha.png" />
+    <Content Include="img\novi.png" />
+    <Content Include="img\palco.jpg" />
+    <Content Include="img\papel.jpg" />
+    <Content Include="img\papel2.jpg" />
+    <Content Include="img\PasswordIcone1.png" />
+    <Content Include="img\PerfilIcone.png" />
+    <Content Include="img\pixel.gif" />
+    <Content Include="img\playstore.png" />
+    <Content Include="img\ProcurarIcone.png" />
+    <Content Include="img\qr.jpg" />
+    <Content Include="img\AssentoRemovido.png" />
+    <Content Include="img\Rafinha.jpg" />
+    <Content Include="img\SimplesSelec.png" />
+    <Content Include="img\tata-werneck.jpg" />
+    <Content Include="img\thiago.jpg" />
+    <Content Include="img\TomCavalcanti.jpg" />
+    <Content Include="img\twitter.png" />
+    <Content Include="img\UserIcone.png" />
+    <Content Include="img\video.png" />
+    <Content Include="img\visa.png" />
+    <Content Include="img\wakeme.mp4" />
+    <Content Include="img\whin.jpg" />
+    <Content Include="img\whin2.jpg" />
+    <Content Include="img\whinCasei.jpg" />
+    <Content Include="img\XIcone.png" />
+    <Content Include="img\yout.png" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-reboot.min.css.map" />
+    <Content Include="Content\bootstrap-reboot.css.map" />
+    <Content Include="Content\bootstrap-grid.min.css.map" />
+    <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="js\all.js" />
+    <Content Include="js\all.min.js" />
+    <Content Include="js\brands.js" />
+    <Content Include="js\brands.min.js" />
+    <Content Include="js\fontawesome.js" />
+    <Content Include="js\fontawesome.min.js" />
+    <Content Include="js\regular.js" />
+    <Content Include="js\regular.min.js" />
+    <Content Include="js\solid.js" />
+    <Content Include="js\solid.min.js" />
+    <Content Include="js\v4-shims.js" />
+    <Content Include="js\v4-shims.min.js" />
+    <Content Include="less\brands.less" />
+    <Content Include="less\fontawesome.less" />
+    <Content Include="less\regular.less" />
+    <Content Include="less\solid.less" />
+    <Content Include="less\v4-shims.less" />
+    <Content Include="less\_animated.less" />
+    <Content Include="less\_bordered-pulled.less" />
+    <Content Include="less\_core.less" />
+    <Content Include="less\_fixed-width.less" />
+    <Content Include="less\_icons.less" />
+    <Content Include="less\_larger.less" />
+    <Content Include="less\_list.less" />
+    <Content Include="less\_mixins.less" />
+    <Content Include="less\_rotated-flipped.less" />
+    <Content Include="less\_screen-reader.less" />
+    <Content Include="less\_shims.less" />
+    <Content Include="less\_stacked.less" />
+    <Content Include="less\_variables.less" />
+    <Content Include="metadata\categories.yml" />
+    <Content Include="metadata\icons.json" />
+    <Content Include="metadata\icons.yml" />
+    <Content Include="metadata\shims.json" />
+    <Content Include="metadata\shims.yml" />
+    <Content Include="metadata\sponsors.yml" />
+    <Content Include="SemLogin\FeedbackOff.aspx" />
+    <Content Include="webfonts\fa-brands-400.svg" />
+    <Content Include="webfonts\fa-regular-400.svg" />
+    <Content Include="webfonts\fa-solid-900.svg" />
+    <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.3.1.js" />
+    <Content Include="Scripts\jquery-3.3.1.min.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.js" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.js" />
+    <Content Include="Scripts\jquery.maskedinput.min.js" />
+    <Content Include="SemLogin\AgendaOff.aspx" />
+    <Content Include="SemLogin\AjudaOff.aspx" />
+    <Content Include="SemLogin\ArtistasOff.aspx" />
+    <Content Include="SemLogin\CadastroOff.aspx" />
+    <Content Include="SemLogin\EsqueceuSenhaOff.aspx" />
+    <Content Include="SemLogin\HomeOff.aspx" />
+    <Content Include="ComLogin\Login.aspx">
+      <BrowseToURL>~/ComLogin/Login.aspx</BrowseToURL>
+    </Content>
+    <Content Include="ModeloOff.Master" />
+    <Content Include="ModeloOn.Master" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\esm\popper-utils.js" />
+    <Content Include="Scripts\esm\popper-utils.min.js" />
+    <Content Include="Scripts\esm\popper.js" />
+    <Content Include="Scripts\esm\popper.min.js" />
+    <Content Include="Scripts\esm\popper.min.js.map" />
+    <Content Include="Scripts\esm\popper.js.map" />
+    <Content Include="Scripts\esm\popper-utils.min.js.map" />
+    <Content Include="Scripts\esm\popper-utils.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\popper-utils.js" />
+    <Content Include="Scripts\popper-utils.min.js" />
+    <Content Include="Scripts\popper.js" />
+    <Content Include="Scripts\popper.min.js" />
+    <Content Include="Scripts\umd\popper-utils.js" />
+    <Content Include="Scripts\umd\popper-utils.min.js" />
+    <Content Include="Scripts\umd\popper.js" />
+    <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Scripts\umd\popper.min.js.map" />
+    <Content Include="Scripts\umd\popper.js.map" />
+    <Content Include="Scripts\umd\popper-utils.min.js.map" />
+    <Content Include="Scripts\umd\popper-utils.js.map" />
+    <Content Include="Scripts\README.md" />
+    <Content Include="Scripts\popper.min.js.map" />
+    <Content Include="Scripts\popper.js.map" />
+    <Content Include="Scripts\popper-utils.min.js.map" />
+    <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Scripts\jquery-3.3.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.3.1.min.map" />
+    <Content Include="scss\brands.scss" />
+    <Content Include="scss\fontawesome.scss" />
+    <Content Include="scss\regular.scss" />
+    <Content Include="scss\solid.scss" />
+    <Content Include="scss\v4-shims.scss" />
+    <Content Include="scss\_animated.scss" />
+    <Content Include="scss\_bordered-pulled.scss" />
+    <Content Include="scss\_core.scss" />
+    <Content Include="scss\_fixed-width.scss" />
+    <Content Include="scss\_icons.scss" />
+    <Content Include="scss\_larger.scss" />
+    <Content Include="scss\_list.scss" />
+    <Content Include="scss\_mixins.scss" />
+    <Content Include="scss\_rotated-flipped.scss" />
+    <Content Include="scss\_screen-reader.scss" />
+    <Content Include="scss\_shims.scss" />
+    <Content Include="scss\_stacked.scss" />
+    <Content Include="scss\_variables.scss" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <Content Include="webfonts\fa-brands-400.eot" />
+    <Content Include="webfonts\fa-brands-400.ttf" />
+    <Content Include="webfonts\fa-brands-400.woff" />
+    <Content Include="webfonts\fa-brands-400.woff2" />
+    <Content Include="webfonts\fa-regular-400.eot" />
+    <Content Include="webfonts\fa-regular-400.ttf" />
+    <Content Include="webfonts\fa-regular-400.woff" />
+    <Content Include="webfonts\fa-regular-400.woff2" />
+    <Content Include="webfonts\fa-solid-900.eot" />
+    <Content Include="webfonts\fa-solid-900.ttf" />
+    <Content Include="webfonts\fa-solid-900.woff" />
+    <Content Include="webfonts\fa-solid-900.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SemLogin\MostrarEventoOff.aspx" />
+    <Content Include="sprites\brands.svg" />
+    <Content Include="sprites\regular.svg" />
+    <Content Include="sprites\solid.svg" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BoletoBancario.aspx.cs">
+      <DependentUpon>BoletoBancario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BoletoBancario.aspx.designer.cs">
+      <DependentUpon>BoletoBancario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComLogin\AgendaOn.aspx.cs">
+      <DependentUpon>AgendaOn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComLogin\AgendaOn.aspx.designer.cs">
+      <DependentUpon>AgendaOn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComLogin\AjudaOn.aspx.cs">
+      <DependentUpon>AjudaOn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComLogin\AjudaOn.aspx.designer.cs">
+      <DependentUpon>AjudaOn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComLogin\ArtistasOn.aspx.cs">
+      <DependentUpon>ArtistasOn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComLogin\ArtistasOn.aspx.designer.cs">
+      <DependentUpon>ArtistasOn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComLogin\FeedbackOn.aspx.cs">
+      <DependentUpon>FeedbackOn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComLogin\FeedbackOn.aspx.designer.cs">
+      <DependentUpon>FeedbackOn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComLogin\HomeOn.aspx.cs">
+      <DependentUpon>HomeOn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComLogin\HomeOn.aspx.designer.cs">
+      <DependentUpon>HomeOn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComLogin\IngressoOn.aspx.cs">
+      <DependentUpon>IngressoOn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComLogin\IngressoOn.aspx.designer.cs">
+      <DependentUpon>IngressoOn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComLogin\MostrarArtistaOn.aspx.cs">
+      <DependentUpon>MostrarArtistaOn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComLogin\MostrarArtistaOn.aspx.designer.cs">
+      <DependentUpon>MostrarArtistaOn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComLogin\MostrarEventoOn.aspx.cs">
+      <DependentUpon>MostrarEventoOn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComLogin\MostrarEventoOn.aspx.designer.cs">
+      <DependentUpon>MostrarEventoOn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComLogin\PagamentoOn.aspx.cs">
+      <DependentUpon>PagamentoOn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComLogin\PagamentoOn.aspx.designer.cs">
+      <DependentUpon>PagamentoOn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComLogin\PerfilOn.aspx.cs">
+      <DependentUpon>PerfilOn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComLogin\PerfilOn.aspx.designer.cs">
+      <DependentUpon>PerfilOn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModeloOff.Master.cs">
+      <DependentUpon>ModeloOff.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModeloOff.Master.designer.cs">
+      <DependentUpon>ModeloOff.Master</DependentUpon>
+    </Compile>
+    <Compile Include="ModeloOn.Master.cs">
+      <DependentUpon>ModeloOn.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ModeloOn.Master.designer.cs">
+      <DependentUpon>ModeloOn.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SemLogin\AgendaOff.aspx.cs">
+      <DependentUpon>AgendaOff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SemLogin\AgendaOff.aspx.designer.cs">
+      <DependentUpon>AgendaOff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SemLogin\AjudaOff.aspx.cs">
+      <DependentUpon>AjudaOff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SemLogin\AjudaOff.aspx.designer.cs">
+      <DependentUpon>AjudaOff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SemLogin\ArtistasOff.aspx.cs">
+      <DependentUpon>ArtistasOff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SemLogin\ArtistasOff.aspx.designer.cs">
+      <DependentUpon>ArtistasOff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SemLogin\CadastroOff.aspx.cs">
+      <DependentUpon>CadastroOff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SemLogin\CadastroOff.aspx.designer.cs">
+      <DependentUpon>CadastroOff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SemLogin\EsqueceuSenhaOff.aspx.cs">
+      <DependentUpon>EsqueceuSenhaOff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SemLogin\EsqueceuSenhaOff.aspx.designer.cs">
+      <DependentUpon>EsqueceuSenhaOff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SemLogin\FeedbackOff.aspx.cs">
+      <DependentUpon>FeedbackOff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SemLogin\FeedbackOff.aspx.designer.cs">
+      <DependentUpon>FeedbackOff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SemLogin\HomeOff.aspx.cs">
+      <DependentUpon>HomeOff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SemLogin\HomeOff.aspx.designer.cs">
+      <DependentUpon>HomeOff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ComLogin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ComLogin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SemLogin\MostrarEventoOff.aspx.cs">
+      <DependentUpon>MostrarEventoOff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SemLogin\MostrarEventoOff.aspx.designer.cs">
+      <DependentUpon>MostrarEventoOff.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\BLL.csproj">
+      <Project>{f7ce8605-e2d8-4c1d-a2c0-920ad080d425}</Project>
+      <Name>BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54047</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:54047/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

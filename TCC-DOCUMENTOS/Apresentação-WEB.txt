@@ -1,0 +1,15 @@
+Slide(Diego)
+
+Web: Gabriel, Lucas e Diego
+-Gabriel: Agenda, MostrarEvento, Ingresso e Pagamento
+-Diego: Login, Cadastro, EsqueceuSenha e Perfil
+-Lucas: Ajuda,Hub, Artista, FeedBack e MostrarArtista
+
+Hub(Lucas), Login(Diego) , Cadastro(Diego) , EsqueceuSenha(Diego) , Perfil(Diego), Artista(Lucas), MostrarArtista(Lucas), Agenda(Gabriel), MostrarEvento(Gabriel), Ingresso (Gabriel), Pagamento(Gabriel), A=-juda(Lucas), FeedBack(Lucas)
+
+Mobile: Arthur e Marcos
+-Arthur: Historico, Login e Cadastro
+-Marcos: Hub, Agenda, Perfil
+
+Login(Arthur), Cadastro(Arthur),Hub(Marcos), Agenda(Marcos), Perfil(Marcos), Historico(Arthur)
+

@@ -1,0 +1,188 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Padrão.master.cs" Inherits="TCC_Oficial.Modelos_Cliente.Padrão" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Comedy House</title>
+    <link rel="shortcut icon" href="../../img/favicon.ico" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+    <style type="text/css">
+        #form1 {
+            width: 100%;
+        }
+
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style6{
+            width: 15%;
+        }
+        body {
+            background-image: url("/img/hahaha3.jpeg");
+            background-repeat: repeat-x repeat-y;
+            background-attachment: fixed;
+            color: white;
+            font-family: Quicksand;
+        }
+
+        #linkTitulo {
+            text-decoration: none;
+            color: white;
+        }
+
+        #Logo {
+            margin-top: 1%;
+            margin-bottom: 2%;
+            font-size: 410%;
+            text-align: center;
+        }
+
+        #Logo #img_logo {
+            width: 90px;
+            position: absolute;
+        }
+
+        #BarraNavegacao {
+            border: solid 1px red;
+            background-color: rgb(145,0,0);
+            text-align: center;
+            width: 100%;
+        }
+
+        #BarraNavegacao #linkAgenda, #linkAjuda, #linkHumoristas, #linkLogin {
+            display: inline;
+            font-size: 140%;
+            color: white;
+            padding: 1%;
+            margin-left: 3.5%;
+            margin-right: 7%;
+            text-decoration: none;
+        }
+
+        .Imagens {
+            /*margin-top: 5px;
+            margin-left: 10px;
+            position: absolute;*/
+        }
+
+        .rodape {
+            text-align: center;
+            background-color: #050000;
+            border-top: solid 1px white;
+            /*STA*/
+            /*margin-left: -0.8%;
+			margin-right: -0.8%;*/
+        }
+
+        .rodape h2 {
+            font-size: 150%;
+            margin-bottom: 2%;
+        }
+
+        .rodape #img_face, #img_twitter, #img_youtube, #img_instagram {
+            width: 85px;
+            min-height: 85px;
+        }
+
+        #linkFacebook {
+            margin-right: 10%;
+        }
+
+        #linkTwitter {
+            margin-right: 10%;
+        }
+
+        #linkInstagram {
+            margin-left: 10%;
+        }
+
+        .auto-style2 {
+            font-size: large;
+        }
+
+        .auto-style3 {
+            font-size: small;
+        }
+
+        .linkSair {
+            display: inline;
+            font-size: 120%;
+            color: white;
+            padding: 1%;
+            /*margin-left: 3.5%;
+            margin-right: 5%;*/
+            text-decoration: none;
+        }
+        .auto-style4 {
+            margin-top: 5px;
+            margin-left: 10px;
+            position: absolute;
+            left: 525px;
+        }
+        .auto-style5 {
+            margin-top: 5px;
+            margin-left: 10px;
+            position: absolute;
+            right: 788px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <table class="auto-style1">
+            <tr>
+                <td class="auto-style6"></td>
+                <td class="auto-style2">
+                    <!-- Logo e Slogan -->
+                    <div id="Logo">
+                        <asp:HyperLink ID="linkTitulo" runat="server" NavigateUrl="~/Telas/Cliente/TelaPrincipal.aspx">
+                            <asp:Label ID="titulo_logo" runat="server" Text="Comedy House">
+                            <asp:Image ID="img_logo" runat="server" ImageUrl="~/img/mic.png" /></asp:Label>
+                        </asp:HyperLink>
+                        <br />
+                    </div>
+
+                    <!-- Barra de navegação -->
+                    <div id="BarraNavegacao">
+                        <nav>
+                            <asp:Image ID="Image3" runat="server" Width="16px" CssClass="Imagens" ImageUrl="~/img/AgendaIcone.png" />
+                            <asp:HyperLink ID="linkAgenda" CssClass="linkAgenda" runat="server" NavigateUrl="~/Telas/Cliente/Agenda.aspx">Agenda</asp:HyperLink>
+                            <asp:Image ID="Image4" runat="server" Width="16px" CssClass="Imagens" ImageUrl="~/img/AjudaIcone.png" />
+                            <asp:HyperLink ID="linkAjuda" CssClass="linkAjuda" runat="server" NavigateUrl="~/Telas/Cliente/Ajuda.aspx">Ajuda</asp:HyperLink>
+                            <asp:Image ID="Image5" runat="server" Width="16px" CssClass="Imagens" ImageUrl="~/img/ArtistaIcone1.png" />
+                            <asp:HyperLink ID="linkHumoristas" CssClass="linkHumoristas" runat="server" NavigateUrl="~/Telas/Cliente/Artistas.aspx">Artistas</asp:HyperLink>
+                            <asp:Image ID="Image6" runat="server" Width="16px" CssClass="Imagens" ImageUrl="~/img/EntrarIcone.png" />
+                            <asp:HyperLink ID="linkLogin" CssClass="linkSair" runat="server" NavigateUrl="~/Telas/Cliente/Logado/Login.aspx"><b>Login</b></asp:HyperLink>
+                        </nav>
+                    </div>
+                </td>
+                <td class="auto-style6"></td>
+            </tr>
+            </table>
+           
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+                
+        <footer class="rodape">
+            <h2>Mantenha-se atualizado(a) pelas nossas redes sociais!</h2>
+            <asp:HyperLink ID="linkFacebook" runat="server" NavigateUrl="https://www.facebook.com/">
+                <asp:Image ID="img_face" runat="server" ImageUrl="~/img/face2.png" />
+            </asp:HyperLink>
+            <asp:HyperLink ID="linkTwitter" runat="server" NavigateUrl="https://twitter.com/">
+                <asp:Image ID="img_twitter" runat="server" ImageUrl="~/img/twitter.png" />
+            </asp:HyperLink>
+            <asp:HyperLink ID="linkYoutube" runat="server" NavigateUrl="https://www.youtube.com/">
+                <asp:Image ID="img_youtube" runat="server" ImageUrl="~/img/yout.png" />
+            </asp:HyperLink>
+            <asp:HyperLink ID="linkInstagram" runat="server" NavigateUrl="https://www.instagram.com/">
+                <asp:Image ID="img_instagram" runat="server" ImageUrl="~/img/insta.png" />
+            </asp:HyperLink>
+            <br />
+            <br />
+            <asp:Label ID="Label1" runat="server" Font-Italic="True" Text="Powered by "></asp:Label>
+            <asp:Label ID="Label2" runat="server" Font-Bold="true" Text="Equipe 05"></asp:Label>
+        </footer>
+    </form>
+</body>
+</html>

@@ -1,0 +1,12 @@
+EVENTO:
+"No cadastro de eventos, temos a divisão em duas partes: a inclusão dos artistas e as outras informações. Nas informações, insere-se a data e horário, duração, título e valor do evento. A descrição é opcional. Nos artistas, à esquerda temos todos os cadastrados no sistema e à direita os selecionados àquele evento"
+
+
+
+"No gerenciamento, eventos destacados em vermelho são os que já ocorreram, por isso não podem mais ser alterados, e eventos com ingressos já vendidos não podem ser desativados. E outro procedimento padrão do sistema é o filtro, que pode detalhar uma busca"
+
+CLIENTE:
+"No cadastro de cliente, apenas nome, CPF, pergunta e resposta secretas são necessárias. O primeiro usuário e senha é o CPF de usuário e 1234 de senha. No primeiro login no site ou mobile o usuário pode alterar"
+
+"No gerenciamento, temos o filtro e as funções padrão do sistema. Quando se seleciona um cliente, podemos consultar seus dados e histórico de compras e até checar os pagamentos, caso seja necessário"
+

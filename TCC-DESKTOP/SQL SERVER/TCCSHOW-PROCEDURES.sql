@@ -1,0 +1,558 @@
+/* 
+            COMEDY HOUSE
+            
+    Tema: CASA DE SHOW DE STAND-UP
+    
+    Turma: INF3AM
+    
+    Grupo: Arthur Porto                 01
+           Diego Gomes                  07
+           Gabriel Leandro              11
+           Lucas Camargo                19
+           Marcos Santos                26
+*/
+
+----------------------------------------------------------------------
+create or replace procedure SP_PESSOA
+(
+vID_PESSOA integer,
+vNOME varchar2,
+vDATA_NASC date,
+vSEXO varchar2,
+vATIVO number,
+vID_TIPO_PESSOA integer,
+vOPR char)
+IS
+  vEXCEPTION EXCEPTION;------------ PENSAR SOBRE: SE DARÁ PRA ALTERAR ID_TIPO_PESSOA
+  BEGIN   
+  
+    IF(vOPR='D')THEN -- DELETAR
+                    DELETE FROM TB_PESSOA WHERE ID_PESSOA = vID_PESSOA;              
+    ELSE
+    IF(vOPR='A')THEN -- ALTERAR
+                    UPDATE TB_PESSOA SET NOME = vNOME, DATA_NASC= vDATA_NASC, SEXO= vSEXO ,ATIVO = vATIVO, ID_TIPO_PESSOA= vID_TIPO_PESSOA
+                    WHERE ID_PESSOA = vID_PESSOA;                       
+    ELSE
+    IF(vOPR='I')THEN -- INCLUIR
+                    INSERT INTO TB_PESSOA(ID_PESSOA, NOME, DATA_NASC, SEXO, ATIVO,  ID_TIPO_PESSOA ,DATA_CRIACAO)
+                    VALUES (SQ_PESSOA.NEXTVAL, vNOME, vDATA_NASC, vSEXO, vATIVO, vID_TIPO_PESSOA, SYSDATE);               
+    END IF;
+    END IF;
+    END IF;
+
+
+  
+
+  EXCEPTION
+    WHEN vEXCEPTION THEN
+      RAISE_APPLICATION_ERROR(-20999,'ATENÇÃO! Operação diferente de I, D, A.', FALSE);
+END SP_PESSOA;
+/
+---------------------------------------------------------------------
+create or replace procedure SP_ARTISTA
+(
+vID_ARTISTA_GERAL integer,
+vID_REDESOCIAL integer,
+vFACEBOOK varchar2,
+vTWITTER varchar2,
+vINSTAGRAM varchar2,
+vID_PESSOA integer,
+vID_TIPO_PESSOA integer,
+vURL_IMG varchar2,
+vID_AGENTE integer,
+vID_ENDERECO integer,
+vTELEFONE varchar2,
+vCPF varchar2,
+vEMAIL varchar2,
+vOPR char)
+IS
+  vEXCEPTION EXCEPTION;
+  BEGIN   
+IF(vID_TIPO_PESSOA=4)THEN--ARTISTA FIXO
+
+
+IF(vOPR='D')THEN -- DELETAR
+                    DELETE FROM TB_REDESOCIAL WHERE ID_REDESOCIAL= (SELECT ID_REDESOCIAL FROM TB_ARTISTA_GERAL WHERE 
+                    ID_ARTISTA_GERAL= vID_ARTISTA_GERAL);
+                    DELETE FROM TB_PESSOA WHERE ID_PESSOA = (SELECT ID_PESSOA FROM TB_ARTISTA_GERAL WHERE 
+                    ID_ARTISTA_GERAL= vID_ARTISTA_GERAL);
+                    DELETE FROM TB_ENDERECO WHERE ID_ENDERECO= (SELECT ID_ENDERECO FROM TB_ARTISTA_FIXO WHERE 
+                    ID_ARTISTA_GERAL = vID_ARTISTA_GERAL);
+                    DELETE FROM TB_ARTISTA_FIXO WHERE ID_ARTISTA_GERAL= vID_ARTISTA_GERAL;
+                    DELETE FROM TB_ARTISTA_GERAL WHERE ID_ARTISTA_GERAL= vID_ARTISTA_GERAL;
+
+
+    ELSE
+    IF(vOPR='A')THEN -- ALTERAR   
+                    
+                 
+    
+                    UPDATE TB_ARTISTA_GERAL SET ID_REDESOCIAL= vID_REDESOCIAL,
+                    URL_IMG= vURL_IMG
+                    WHERE ID_PESSOA = vID_PESSOA;
+
+                    UPDATE TB_REDESOCIAL SET FACEBOOK= vFACEBOOK, TWITTER=vTWITTER,
+                    INSTAGRAM= vINSTAGRAM WHERE ID_REDESOCIAL= vID_REDESOCIAL;
+                    
+                    UPDATE TB_ARTISTA_FIXO SET ID_ENDERECO= vID_ENDERECO, TELEFONE= vTELEFONE,
+                    CPF= vCPF, EMAIL= vEMAIL 
+                    WHERE ID_ARTISTA_GERAL = vID_ARTISTA_GERAL;
+                    
+                    
+    ELSE
+    IF(vOPR='AN')THEN -- ALTERAR DE ARTISTA PRA ARTISTA FIXO
+                    
+                   DELETE FROM TB_ARTISTA WHERE ID_ARTISTA_GERAL= vID_ARTISTA_GERAL;
+    
+                    UPDATE TB_ARTISTA_GERAL SET ID_REDESOCIAL= vID_REDESOCIAL,
+                    URL_IMG= vURL_IMG
+                    WHERE ID_PESSOA = vID_PESSOA;
+
+                    UPDATE TB_REDESOCIAL SET FACEBOOK= vFACEBOOK, TWITTER=vTWITTER,
+                    INSTAGRAM= vINSTAGRAM WHERE ID_REDESOCIAL= vID_REDESOCIAL;
+    
+                    INSERT INTO TB_ARTISTA_FIXO(ID_ARTISTA_GERAL, ID_ENDERECO, TELEFONE, CPF, EMAIL)
+                    VALUES (vID_ARTISTA_GERAL,(SELECT MAX(ID_ENDERECO) FROM TB_ENDERECO), vTELEFONE,
+                    vCPF, vEMAIL); 
+                    
+    ELSE
+    IF(vOPR='I')THEN -- INCLUIR
+                    INSERT INTO TB_REDESOCIAL(ID_REDESOCIAL,FACEBOOK,TWITTER, INSTAGRAM)
+                    VALUES (SQ_REDESOCIAL.NEXTVAL, vFACEBOOK, vTWITTER, vINSTAGRAM); 
+
+                   INSERT INTO TB_ARTISTA_GERAL(ID_ARTISTA_GERAL, ID_REDESOCIAL, ID_PESSOA, URL_IMG)
+                    VALUES (SQ_ARTISTA_GERAL.NEXTVAL,(SELECT MAX(ID_REDESOCIAL) FROM TB_REDESOCIAL) , (SELECT MAX(ID_PESSOA) FROM TB_PESSOA)
+                    , vURL_IMG); 
+
+                    INSERT INTO TB_ARTISTA_FIXO(ID_ARTISTA_GERAL, ID_ENDERECO, TELEFONE, CPF, EMAIL)
+                    VALUES ((SELECT MAX(ID_ARTISTA_GERAL) FROM TB_ARTISTA_GERAL),(SELECT MAX(ID_ENDERECO) FROM TB_ENDERECO), vTELEFONE,
+                    vCPF, vEMAIL); 
+
+
+    END IF;
+    END IF;
+    END IF;
+    END IF;
+
+ELSE-- ARTISTA
+
+IF(vOPR='D')THEN -- DELETAR
+                    DELETE FROM TB_REDESOCIAL WHERE ID_REDESOCIAL= (SELECT ID_REDESOCIAL FROM TB_ARTISTA_GERAL WHERE 
+                    ID_ARTISTA_GERAL= vID_ARTISTA_GERAL);
+                    
+                    DELETE FROM TB_ARTISTA_FIXO WHERE ID_ARTISTA_GERAL= vID_ARTISTA_GERAL;
+
+                    DELETE FROM TB_PESSOA WHERE ID_PESSOA = (SELECT ID_PESSOA FROM TB_ARTISTA_GERAL WHERE 
+                    ID_ARTISTA_GERAL= vID_ARTISTA_GERAL);
+                    DELETE FROM TB_ARTISTA WHERE ID_ARTISTA_GERAL= vID_ARTISTA_GERAL;
+                    DELETE FROM TB_ARTISTA_GERAL WHERE ID_ARTISTA_GERAL= vID_ARTISTA_GERAL;
+
+
+    ELSE
+    IF(vOPR='A')THEN -- ALTERAR    
+            
+    
+                   UPDATE TB_ARTISTA_GERAL SET ID_REDESOCIAL= vID_REDESOCIAL,
+                    URL_IMG= vURL_IMG
+                    WHERE ID_PESSOA = vID_PESSOA;
+
+                    UPDATE TB_REDESOCIAL SET FACEBOOK= vFACEBOOK, TWITTER=vTWITTER,
+                    INSTAGRAM= vINSTAGRAM WHERE ID_REDESOCIAL= vID_REDESOCIAL;
+                        
+                    UPDATE TB_ARTISTA SET ID_AGENTE= vID_AGENTE
+                    WHERE ID_ARTISTA_GERAL = vID_ARTISTA_GERAL;
+    ELSE
+    IF(vOPR='AN')THEN -- ALTERAR DE ARTISTA FIXO PARA ARTISTA  
+                    DELETE FROM TB_ENDERECO WHERE ID_ENDERECO= (SELECT ID_ENDERECO FROM TB_ARTISTA_FIXO
+                    WHERE ID_ARTISTA_GERAL= vID_ARTISTA_GERAL);
+    
+                   DELETE FROM TB_ARTISTA_FIXO WHERE ID_ARTISTA_GERAL= vID_ARTISTA_GERAL;
+    
+                   UPDATE TB_ARTISTA_GERAL SET ID_REDESOCIAL= vID_REDESOCIAL,
+                    URL_IMG= vURL_IMG
+                    WHERE ID_PESSOA = vID_PESSOA;
+
+                    UPDATE TB_REDESOCIAL SET FACEBOOK= vFACEBOOK, TWITTER=vTWITTER,
+                    INSTAGRAM= vINSTAGRAM WHERE ID_REDESOCIAL= vID_REDESOCIAL;
+
+                    INSERT INTO TB_ARTISTA(ID_ARTISTA_GERAL, ID_AGENTE)
+                    VALUES (vID_ARTISTA_GERAL,vID_AGENTE);  
+
+    ELSE
+    IF(vOPR='I')THEN -- INCLUIR
+                     INSERT INTO TB_REDESOCIAL(ID_REDESOCIAL,FACEBOOK,TWITTER, INSTAGRAM)
+                    VALUES (SQ_REDESOCIAL.NEXTVAL, vFACEBOOK, vTWITTER, vINSTAGRAM); 
+
+                   INSERT INTO TB_ARTISTA_GERAL(ID_ARTISTA_GERAL, ID_REDESOCIAL, ID_PESSOA, URL_IMG)
+                    VALUES (SQ_ARTISTA_GERAL.NEXTVAL,(SELECT MAX(ID_REDESOCIAL) FROM TB_REDESOCIAL) , (SELECT MAX(ID_PESSOA) FROM TB_PESSOA)
+                    ,vURL_IMG); 
+
+                    INSERT INTO TB_ARTISTA(ID_ARTISTA_GERAL, ID_AGENTE)
+                    VALUES ((SELECT MAX(ID_ARTISTA_GERAL) FROM TB_ARTISTA_GERAL),vID_AGENTE); 
+
+
+    END IF;
+    END IF;
+    END IF;
+    END IF;
+    END IF;
+
+
+
+
+  EXCEPTION
+    WHEN vEXCEPTION THEN
+      RAISE_APPLICATION_ERROR(-20999,'ATENÇÃO! Operação diferente de I, D, A.', FALSE);
+END SP_ARTISTA;
+--------------------------------------------------
+create or replace procedure SP_AGENTE
+(
+vID_AGENTE integer,
+vID_ENDERECO integer,
+vTELEFONE varchar2,
+vTIPO_PESSOA varchar2,
+vDOCUMENTO varchar2,
+vEMAIL varchar2,
+vNOME_PRINCIPAL varchar2,
+vNOME_SECUNDARIO varchar2,
+vATIVO number,
+vOPR char)
+IS
+  vEXCEPTION EXCEPTION;
+  BEGIN   
+
+    IF(vOPR='D')THEN -- DELETAR
+    
+                   DELETE FROM TB_ENDERECO WHERE ID_ENDERECO= (SELECT ID_ENDERECO FROM TB_AGENTE WHERE
+                    ID_AGENTE= vID_AGENTE);
+                    DELETE FROM TB_AGENTE WHERE ID_AGENTE= vID_AGENTE;
+
+    ELSE
+    IF(vOPR='A')THEN -- ALTERAR                  
+                    UPDATE TB_AGENTE SET TELEFONE= vTELEFONE, TIPO_PESSOA= vTIPO_PESSOA, DOCUMENTO= vDOCUMENTO, EMAIL= vEMAIL,
+                    NOME_PRINCIPAL= vNOME_PRINCIPAL, NOME_SECUNDARIO= vNOME_SECUNDARIO, ATIVO= vATIVO
+                    WHERE ID_AGENTE = vID_AGENTE;
+    ELSE
+    IF(vOPR='I')THEN -- INCLUIR
+
+                   INSERT INTO TB_AGENTE(ID_AGENTE, ID_ENDERECO, TELEFONE, TIPO_PESSOA, DOCUMENTO,EMAIL,NOME_PRINCIPAL
+                   , NOME_SECUNDARIO,ATIVO,DATA_CRIACAO)
+                    VALUES (SQ_AGENTE.NEXTVAL,(SELECT MAX(ID_ENDERECO) FROM TB_ENDERECO) , vTELEFONE  , vTIPO_PESSOA,
+                    vDOCUMENTO, vEMAIL, vNOME_PRINCIPAL,vNOME_SECUNDARIO,vATIVO,SYSDATE ); 
+
+
+    END IF;
+    END IF;
+    END IF;
+
+
+
+
+  EXCEPTION
+    WHEN vEXCEPTION THEN
+      RAISE_APPLICATION_ERROR(-20999,'ATENÇÃO! Operação diferente de I, D, A.', FALSE);
+END SP_AGENTE;
+-----------------------------------------------------
+create or replace procedure SP_ENDERECO
+(
+vID_ENDERECO integer,
+vCEP varchar2,
+vNUMERO number,
+vCOMPLEMENTO varchar2,
+vOPR char)
+IS
+  vEXCEPTION EXCEPTION;
+  BEGIN   
+
+    IF(vOPR='D')THEN -- DELETAR
+                    DELETE FROM TB_ENDERECO WHERE ID_ENDERECO= vID_ENDERECO;
+                    
+    ELSE
+    IF(vOPR='A')THEN -- ALTERAR                  
+                    UPDATE TB_ENDERECO SET CEP= vCEP, NUMERO= vNUMERO, COMPLEMENTO= vCOMPLEMENTO
+                    WHERE ID_ENDERECO = vID_ENDERECO;
+    ELSE
+    IF(vOPR='I')THEN -- INCLUIR
+                    
+                   INSERT INTO TB_ENDERECO(ID_ENDERECO,CEP,NUMERO,COMPLEMENTO)
+                    VALUES (SQ_ENDERECO.NEXTVAL,vCEP, vNUMERO  , vCOMPLEMENTO); 
+                     
+
+    END IF;
+    END IF;
+    END IF;
+
+
+
+
+  EXCEPTION
+    WHEN vEXCEPTION THEN
+      RAISE_APPLICATION_ERROR(-20999,'ATENÇÃO! Operação diferente de I, D, A.', FALSE);
+END SP_ENDERECO;
+------------------------------------------------------
+create or replace procedure SP_LOGIN      
+(
+vID_LOGIN integer,
+vID_NIVELACESSO integer,
+vID_PERGUNTASECRETA integer,
+vUSUARIO varchar2,
+vSENHA varchar2,
+vDATAULTIMOACESSO date,
+vID_PESSOA integer,
+vDESCRICAO varchar2,
+vRESPOSTA varchar2,
+vOPR char)
+IS
+  vEXCEPTION EXCEPTION;
+  BEGIN   
+
+    IF(vOPR='D')THEN -- DELETAR
+                    DELETE FROM TB_LOGIN WHERE ID_LOGIN= vID_LOGIN;
+
+                    DELETE FROM TB_PERGUNTASECRETA WHERE ID_PERGUNTASECRETA= vID_PERGUNTASECRETA;
+    ELSE
+    IF(vOPR='A')THEN -- ALTERAR                  
+                    UPDATE TB_LOGIN SET ID_NIVELACESSO= vID_NIVELACESSO, USUARIO= vUSUARIO, SENHA= vSENHA
+                    WHERE ID_LOGIN = vID_LOGIN;
+
+                     UPDATE TB_PERGUNTASECRETA SET DESCRICAO= vDESCRICAO, RESPOSTA= vRESPOSTA
+                    WHERE ID_PERGUNTASECRETA = (SELECT ID_PERGUNTASECRETA FROM TB_LOGIN WHERE ID_LOGIN= vID_LOGIN);
+    ELSE
+    IF(vOPR='N')THEN -- ALTERAR                  
+                    UPDATE TB_LOGIN SET ID_NIVELACESSO= vID_NIVELACESSO, USUARIO= vUSUARIO, SENHA= vSENHA
+                    WHERE ID_LOGIN = vID_LOGIN;
+
+                
+    ELSE
+    IF(vOPR='I')THEN -- INCLUIR
+
+                    INSERT INTO TB_PERGUNTASECRETA(ID_PERGUNTASECRETA,DESCRICAO, RESPOSTA)
+                    VALUES (SQ_PERGUNTASECRETA.NEXTVAL,vDESCRICAO,vRESPOSTA); 
+
+
+                   INSERT INTO TB_LOGIN(ID_LOGIN,ID_NIVELACESSO,ID_PERGUNTASECRETA,USUARIO, SENHA, DATAULTIMOACESSO, ID_PESSOA)
+                    VALUES (SQ_LOGIN.NEXTVAL,vID_NIVELACESSO,(SELECT MAX(ID_PERGUNTASECRETA) FROM TB_PERGUNTASECRETA),
+                    vUSUARIO  , vSENHA, SYSDATE,(SELECT MAX(ID_PESSOA) FROM TB_PESSOA) ); 
+
+
+    END IF;
+    END IF;
+    END IF;
+    END IF;
+
+
+
+  EXCEPTION
+    WHEN vEXCEPTION THEN
+      RAISE_APPLICATION_ERROR(-20999,'ATENÇÃO! Operação diferente de I, D, A.', FALSE);
+END SP_LOGIN;
+---------------------------------------------------------
+create or replace procedure SP_CONTAS    
+(
+vID_CONTAS integer,
+vID_DATA_CONTA integer,
+vDATA_CONTA date,
+vTIPO_DATA varchar2,
+vTIPO_CONTA varchar2,
+vDATA_LANCAMENTO date,
+vDESCRICAO varchar2,
+vID_FORMA_PAGAMENTO integer,
+vSITUACAO varchar2,
+vDEPARTAMENTO varchar2,
+vVALOR number,
+vATIVO number,
+vOPR char)
+IS
+  vEXCEPTION EXCEPTION;
+  BEGIN   
+
+    IF(vOPR='D')THEN -- DELETAR
+                    DELETE FROM TB_CONTAS WHERE ID_CONTAS= vID_CONTAS;
+                    DELETE FROM TB_DATA_CONTA WHERE ID_DATA_CONTA = vID_DATA_CONTA;
+    ELSE
+    IF(vOPR='A')THEN -- ALTERAR                  
+                    UPDATE TB_CONTAS SET TIPO_CONTA= vTIPO_CONTA, DESCRICAO= vDESCRICAO, ID_FORMA_PAGAMENTO= vID_FORMA_PAGAMENTO,
+                    SITUACAO= vSITUACAO, DEPARTAMENTO= vDEPARTAMENTO, VALOR= vVALOR, ATIVO= vATIVO
+                    WHERE ID_CONTAS = vID_CONTAS;
+
+                     UPDATE TB_DATA_CONTA SET DATA_CONTA= vDATA_CONTA, TIPO_DATA= vTIPO_DATA
+                    WHERE ID_DATA_CONTA = vID_DATA_CONTA;
+    ELSE
+    IF(vOPR='I')THEN -- INCLUIR
+
+                    INSERT INTO TB_DATA_CONTA(ID_DATA_CONTA,DATA_CONTA, TIPO_DATA)
+                    VALUES (SQ_DATA_CONTA.NEXTVAL,vDATA_CONTA,vTIPO_DATA); 
+
+
+                   INSERT INTO TB_CONTAS(ID_CONTAS,ID_DATA_CONTA,TIPO_CONTA,DATA_LANCAMENTO,DESCRICAO,ID_FORMA_PAGAMENTO,SITUACAO,
+                   DEPARTAMENTO, VALOR, ATIVO)
+                    VALUES (SQ_CONTAS.NEXTVAL,(SELECT MAX(ID_DATA_CONTA) FROM TB_DATA_CONTA),vTIPO_CONTA,
+                SYSDATE  , vDESCRICAO, vID_FORMA_PAGAMENTO, vSITUACAO, vDEPARTAMENTO, vVALOR, vATIVO ); 
+
+
+    END IF;
+    END IF;
+    END IF;
+
+
+
+
+  EXCEPTION
+    WHEN vEXCEPTION THEN
+      RAISE_APPLICATION_ERROR(-20999,'ATENÇÃO! Operação diferente de I, D, A.', FALSE);
+END SP_CONTAS;
+---------------------------------------------------------
+create or replace procedure SP_FORMA_PAGAMENTO
+(
+vID_FORMA_PAGAMENTO integer,
+vFORMA_PAGAMENTO varchar2,
+vOPR char)
+IS
+  vEXCEPTION EXCEPTION;
+  BEGIN   
+  
+    IF(vOPR='D')THEN -- DELETAR
+                    DELETE FROM TB_FORMA_PAGAMENTO WHERE ID_FORMA_PAGAMENTO = vID_FORMA_PAGAMENTO;              
+    ELSE
+    IF(vOPR='A')THEN -- ALTERAR
+                    UPDATE TB_FORMA_PAGAMENTO SET FORMA_PAGAMENTO = vFORMA_PAGAMENTO
+                    WHERE ID_FORMA_PAGAMENTO = vID_FORMA_PAGAMENTO;                       
+    ELSE
+    IF(vOPR='I')THEN -- INCLUIR
+                    INSERT INTO TB_FORMA_PAGAMENTO(ID_FORMA_PAGAMENTO, FORMA_PAGAMENTO)
+                    VALUES (SQ_FORMA_PAGAMENTO.NEXTVAL, vFORMA_PAGAMENTO);               
+    END IF;
+    END IF;
+    END IF;
+
+
+  
+
+  EXCEPTION
+    WHEN vEXCEPTION THEN
+      RAISE_APPLICATION_ERROR(-20999,'ATENÇÃO! Operação diferente de I, D, A.', FALSE);
+END SP_FORMA_PAGAMENTO;
+---------------------------------------------------------
+create or replace procedure SP_FUNCAO
+(
+vID_FUNCAO integer,
+vFUNCAO varchar2,
+vOPR char)
+IS
+  vEXCEPTION EXCEPTION;
+  BEGIN   
+  
+    IF(vOPR='D')THEN -- DELETAR
+                    DELETE FROM TB_FUNCAO WHERE ID_FUNCAO = vID_FUNCAO;              
+    ELSE
+    IF(vOPR='A')THEN -- ALTERAR
+                    UPDATE TB_FUNCAO SET FUNCAO = vFUNCAO
+                    WHERE ID_FUNCAO = vID_FUNCAO;                       
+    ELSE
+    IF(vOPR='I')THEN -- INCLUIR
+                    INSERT INTO TB_FUNCAO(ID_FUNCAO, FUNCAO)
+                    VALUES (SQ_FUNCAO.NEXTVAL, vFUNCAO);               
+    END IF;
+    END IF;
+    END IF;
+
+
+  
+
+  EXCEPTION
+    WHEN vEXCEPTION THEN
+      RAISE_APPLICATION_ERROR(-20999,'ATENÇÃO! Operação diferente de I, D, A.', FALSE);
+END SP_FUNCAO;
+---------------------------------------------------------
+create or replace procedure SP_FUNCIONARIO
+(
+vID_FUNC integer,
+vID_FUNCAO integer,
+vID_ENDERECO integer,
+vCPF varchar2,
+vEMAIL varchar2,
+vTELEFONE varchar2,
+vID_PESSOA integer,
+vOPR char)
+IS
+  vEXCEPTION EXCEPTION;
+  BEGIN   
+
+    IF(vOPR='D')THEN -- DELETAR
+                    DELETE FROM TB_ENDERECO WHERE ID_ENDERECO= (SELECT ID_ENDERECO FROM TB_FUNCIONARIO WHERE
+                    ID_FUNC= vID_FUNC);
+                    DELETE FROM TB_FUNCIONARIO WHERE ID_FUNC = vID_FUNC;              
+    ELSE
+    IF(vOPR='A')THEN -- ALTERAR
+                    UPDATE TB_FUNCIONARIO SET ID_FUNCAO = vID_FUNCAO, CPF= vCPF, EMAIL= vEMAIL, TELEFONE= vTELEFONE
+                    WHERE ID_FUNCAO = vID_FUNCAO;                       
+    ELSE
+    IF(vOPR='I')THEN -- INCLUIR
+                    INSERT INTO TB_FUNCIONARIO(ID_FUNC, ID_FUNCAO, ID_ENDERECO, CPF, EMAIL, TELEFONE, ID_PESSOA)
+                    VALUES (SQ_FUNCIONARIO.NEXTVAL, vID_FUNCAO, (SELECT MAX(ID_ENDERECO) FROM TB_ENDERECO) , vCPF, vEMAIL,
+                    vTELEFONE, (SELECT MAX(ID_PESSOA) FROM TB_PESSOA) );               
+    END IF;
+    END IF;
+    END IF;
+
+
+
+
+  EXCEPTION
+    WHEN vEXCEPTION THEN
+      RAISE_APPLICATION_ERROR(-20999,'ATENÇÃO! Operação diferente de I, D, A.', FALSE);
+END SP_FUNCIONARIO;
+---------------------------------------------------------
+create or replace procedure SP_EVENTO    
+(
+vID_EVENTO integer,
+vTITULO varchar2,
+vDATA_EVENTO date,
+vDESCRICAO varchar2,
+vHORARIO_INICIO date,
+vHORARIO_FINAL date,
+vN_ARTISTAS number,
+vATIVO number,
+vVALOR_EVENTO number,
+vID_ARTISTA_GERAL integer,
+vOPR char)
+IS
+  vEXCEPTION EXCEPTION;
+  BEGIN   
+
+    IF(vOPR='D')THEN -- DELETAR
+                    DELETE FROM TB_EVENTO WHERE ID_EVENTO= vID_EVENTO;
+
+    ELSE
+    IF(vOPR='A')THEN -- ALTERAR                  
+                    UPDATE TB_EVENTO SET TITULO=vTITULO, DATA_EVENTO=vDATA_EVENTO, DESCRICAO=vDESCRICAO,
+                    HORARIO_INICIO=vHORARIO_INICIO, HORARIO_FINAL= vHORARIO_FINAL, N_ARTISTAS=vN_ARTISTAS,
+                    ATIVO=vATIVO, VALOR_EVENTO= vVALOR_EVENTO WHERE ID_EVENTO= vID_EVENTO;
+    ELSE
+    IF(vOPR='I')THEN -- INCLUIR
+
+                    INSERT INTO TB_EVENTO (ID_EVENTO, TITULO, DATA_EVENTO, DESCRICAO, HORARIO_INICIO,
+                    HORARIO_FINAL ,N_ARTISTAS,ATIVO, VALOR_EVENTO) 
+                    VALUES (SQ_EVENTO.NEXTVAL, vTITULO ,vDATA_EVENTO ,
+                    vDESCRICAO, vHORARIO_INICIO, vHORARIO_FINAL ,vN_ARTISTAS,vATIVO, vVALOR_EVENTO);
+
+
+    END IF;
+    END IF;
+    END IF;
+
+
+
+
+  EXCEPTION
+    WHEN vEXCEPTION THEN
+      RAISE_APPLICATION_ERROR(-20999,'ATENÇÃO! Operação diferente de I, D, A.', FALSE);
+END SP_EVENTO;
+---------------------------------------------------------
+
+
+CREATE OR REPLACE VIEW(
+
+);
+EXEC proc_Pessoa (1,'teste','A','I');
+select * from TB_PESSOA;

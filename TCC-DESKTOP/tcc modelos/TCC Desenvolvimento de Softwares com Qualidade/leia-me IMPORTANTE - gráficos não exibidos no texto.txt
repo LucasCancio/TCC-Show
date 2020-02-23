@@ -1,0 +1,7 @@
+Tive alguns problemas com a exibição dos gráficos: toda vez que convertia o texto para o formato pdf eles não eram exibidos.
+
+Por isso, envio junto ao texto o arquivo excel para acompanharem o trabalho de um modo melhor.
+
+Obrigado!
+
+Thiago Cezar Perez
