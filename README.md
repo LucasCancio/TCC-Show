@@ -3,6 +3,8 @@
 ##### CASA DE SHOWS DE STAND-UP 
 O projeto envolve a criação de um sistema Desktop para gerenciamento de uma casa de shows, um Website e um aplicativo Mobile para a divulgação e interação da mesma para com os seus clientes. Após um longo processo de decisão, o grupo decidiu, em consenso, o tema Casa de Shows por este ser pouco comum e algo que todos da equipe possuíssem conhecimento e tivessem interesse.  Pesquisas indicam que há muita perda de informação com o uso de papéis no gerenciamento dos estabelecimentos, por isso fomos contratados para ajudar na criação e modernização da Comedy House, que busca seu espaço competindo com outros locais de grande porte.
 
+[Documentação do projeto](https://github.com/LucasCancio/TCC-Show/blob/master/TCC-DOCUMENTOS/TCC_STANDUP_%20GERAL.pdf)
+
 ### 👨‍🎓 Integrantes
 - Arthur Porto Silva
 - Diego Gomes Nogueira da Silva
