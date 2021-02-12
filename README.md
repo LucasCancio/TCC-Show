@@ -8,7 +8,7 @@ O projeto envolve a criação de um sistema Desktop para gerenciamento de uma ca
 ### 👨‍🎓 Integrantes
 - Arthur Porto Silva
 - Diego Gomes Nogueira da Silva
-- [Gabriel Leandro Santos Sousa](https://github.com/gabriels0801)
+- [Gabriel Leandro Santos Sousa](https://github.com/gabrielleandro0801)
 - [Lucas Camargo Cancio](https://github.com/LucasCancio)
 - Marcos Vinicius dos Santos Pereira
 
